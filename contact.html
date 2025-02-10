@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>BuildMart - Order Online</title>
+    <link rel="shortcut icon" href="images/logo.png" />
+    <script defer="defer" src="js/app.bundle.js"></script>
+    <link href="css/app.min.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div
+      class="preloader fixed inset-0 z-[9999] flex justify-center items-center bg-white"
+    >
+      <div class="loader">
+        <img src="images/logo.png" alt="Image" class="" />
+      </div>
+    </div>
+    <div class="overlay"></div>
+    <div class="side-overlay"></div>
+    <div
+      class="progress-wrap fixed right-[36px] bottom-[36px] h-[46px] w-[46px] leading-[46px] cursor-pointer block rounded-[50px] shadow-inset z-[10000] opacity-0 invisible translate-y-[15px] transition-all duration-200 ease-linear bg-transparent max-lg:right-[24px] max-lg:bottom-[24px] max-lg:h-[40px] max-lg:w-[40px] max-lg:leading-[40px] hover:scale-[1.06] after:absolute after:font-[900] after:text-center after:w-[46px] after:h-[46px] after:leading-[46px] after:text-[18px] after:left-0 after:top-0 after:cursor-pointer after:block after:content-['\e08e'] after:font-phospor after:z-[1] after:transition-all after:duration-200 after:ease-linear after:text-main max-lg:after:h-[40px] max-lg:after:w-[40px] max-lg:after:leading-[40px]"
+    >
+      <svg
+        class="progress-circle svg-content"
+        width="100%"
+        height="100%"
+        viewBox="-1 -1 102 102"
+      >
+        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+      </svg>
+    </div>
+    <form action="#" class="search-box">
+      <button
+        type="button"
+        class="search-box__close absolute inset-block-start-0 right-0 m-16 w-48 h-48 border border-gray-100 rounded-[50%] flex items-center justify-center text-white hover-text-gray-800 hover-bg-white text-2xl transition-1"
+      >
+        <i class="ph ph-x"></i>
+      </button>
+      <div class="container">
+        <div class="relative">
+          <input
+            class="form-control block w-full p-[0.375rem_0.75rem] leading-6 text-[#495057] bg-white bg-clip-padding border border-[#ced4da] transition-all duration-150 ease-in-out focus:text-[#495057] focus:bg-white focus:border-main focus:outline-0 focus:shadow-none py-16 px-24 text-xl rounded-[50rem] pe-64 h-[64px]"
+            placeholder="Search for a product or brand"
+          />
+          <button
+            type="submit"
+            class="w-48 h-48 bg-main-600 rounded-[50%] flex items-center justify-center text-xl text-white absolute top-[50%] translate-y-[-50%] right-0 me-8"
+          >
+            <i class="ph ph-magnifying-glass"></i>
+          </button>
+        </div>
+      </div>
+    </form>
+    <!-- Mobile Menu -->
+    <div class="mobile-menu scroll-sm xl:hidden block">
+      <button type="button" class="close-button">
+        <i class="ph ph-x"></i>
+      </button>
+      <div class="mobile-menu__inner">
+        <a href="#" class="mobile-menu__logo"
+          ><img src="images/logo.png" alt="Logo"
+        /></a>
+        <div class="mobile-menu__menu">
+          <ul class="nav-menu flex items-center nav-menu--mobile">
+            <li class="nav-menu__item">
+              <a href="#" class="nav-menu__link">Home</a>
+            </li>
+            <li class="nav-menu__item">
+              <a href="#" class="nav-menu__link">About Us</a>
+            </li>
+            <li class="nav-menu__item">
+              <a href="#" class="nav-menu__link">Shop</a>
+            </li>
+            <li class="nav-menu__item">
+              <a href="#" class="nav-menu__link">Offers</a>
+            </li>
+            <li class="nav-menu__item">
+              <a href="#" class="nav-menu__link">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="header-top bg-success-600 flex-between">
+      <div class="container container-lg">
+        <div class="flex-between flex-wrap gap-8">
+          <ul class="flex items-center flex-wrap hidden lg:flex">
+            <li class="border-right-item">
+              <a
+                href="#shipping"
+                class="text-white text-sm hover-text-decoration-underline"
+                >About us</a
+              >
+            </li>
+            <li class="border-right-item">
+              <a
+                href="#shipping"
+                class="text-white text-sm hover-text-decoration-underline"
+                >Free Delivery</a
+              >
+            </li>
+            <li class="border-right-item">
+              <a
+                href="#shipping"
+                class="text-white text-sm hover-text-decoration-underline"
+                >Returns Policy</a
+              >
+            </li>
+          </ul>
+          <ul class="header-top__right flex items-center flex-wrap">
+            <li
+              class="on-hover-item border-right-item border-right-item-sm-space has-submenu arrow-white"
+            >
+              <a href="#" class="text-white text-sm py-8">Help Center</a>
+              <ul
+                class="on-hover-dropdown common-dropdown common-dropdown--sm max-h-200 scroll-sm px-0 py-8"
+              >
+                <li class="nav-submenu__item">
+                  <a
+                    href="index.html"
+                    class="nav-submenu__link hover-bg-gray-100 text-gray-500 text-xs py-6 px-16 flex items-center gap-8 rounded-none"
+                    ><span class="text-sm flex"
+                      ><i class="ph ph-headset"></i
+                    ></span>
+                    Call Center</a
+                  >
+                </li>
+                <li class="nav-submenu__item">
+                  <a
+                    href="index.html"
+                    class="nav-submenu__link hover-bg-gray-100 text-gray-500 text-xs py-6 px-16 flex items-center gap-8 rounded-none"
+                    ><span class="text-sm flex"
+                      ><i class="ph ph-chat-circle-dots"></i
+                    ></span>
+                    Live Chat</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li
+              class="on-hover-item border-right-item border-right-item-sm-space has-submenu arrow-white"
+            >
+              <a
+                href="javascript:void(0)"
+                class="selected-text text-white text-sm py-8"
+                >Eng</a
+              >
+              <ul
+                class="selectable-text-list on-hover-dropdown common-dropdown common-dropdown--sm max-h-200 scroll-sm px-0 py-8"
+              >
+                <li>
+                  <a
+                    href="javascript:void(0)"
+                    class="hover-bg-gray-100 text-gray-500 text-xs py-6 px-16 flex items-center gap-8 rounded-none"
+                    ><img
+                      src="images/flag1.png"
+                      alt="Image"
+                      class="w-16 h-12 rounded-4 border border-gray-100"
+                    />
+                    English</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="javascript:void(0)"
+                    class="hover-bg-gray-100 text-gray-500 text-xs py-6 px-16 flex items-center gap-8 rounded-none"
+                    ><img
+                      src="images/india.png"
+                      alt="Image"
+                      class="w-16 h-12 rounded-4 border border-gray-100"
+                    />
+                    Hindi</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li
+              class="on-hover-item border-right-item border-right-item-sm-space has-submenu arrow-white"
+            >
+              <a
+                href="javascript:void(0)"
+                class="selected-text text-white text-sm py-8"
+                >USD</a
+              >
+            </li>
+            <li class="border-right-item">
+              <a
+                href="#"
+                class="text-white text-sm py-8 flex items-center gap-6"
+                ><span class="icon text-md flex"
+                  ><i class="ph ph-user-circle"></i> </span
+                ><span class="hover-text-decoration-underline"
+                  >My Account</span
+                ></a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <header class="header-middle bg-color-one border-b border-gray-100">
+      <div class="container container-lg">
+        <nav class="header-inner flex-between">
+          <div class="logo">
+            <a href="#" class="link"
+              ><img src="images/logo.png" alt="Logo"
+            /></a>
+          </div>
+          <form
+            action="#"
+            class="flex items-center flex-wrap form-location-wrapper"
+          >
+            <div
+              class="search-category flex h-48 select-border-r-0 radius-end-0 search-form md:flex hidden"
+            >
+              <select
+                class="js-example-basic-single border border-gray-200 border-r-0"
+                name="state"
+              >
+                <option value="1" selected="selected" disabled="disabled">
+                  All Categories
+                </option>
+                <option value="1">Rishabh Paints</option>
+                <option value="1">Rishabh Hardware</option>
+                <option value="1">Refresh Sanitary</option>
+                <option value="1">Royal Tiles</option>
+                <option value="1">Rishabh Electronics</option>
+                <option value="1">Arpit Pipe</option>
+              </select>
+              <div class="search-form__wrapper relative">
+                <input
+                  class="search-form__input common-input py-13 ps-16 pe-18 !rounded-tr-[50rem] !rounded-br-[50rem] pe-44"
+                  placeholder="Search for a product or brand"
+                />
+                <button
+                  type="submit"
+                  class="w-32 h-32 bg-main-600 rounded-[50%] flex items-center justify-center text-xl text-white absolute top-[50%] translate-y-[-50%] right-0 me-8"
+                >
+                  <i class="ph ph-magnifying-glass"></i>
+                </button>
+              </div>
+            </div>
+            <div
+              class="location-box bg-white flex items-center gap-8 py-6 px-16 rounded-[50rem] border border-gray-100"
+            >
+              <span class="text-gray-900 text-xl sm:flex hidden"
+                ><i class="ph ph-map-pin"></i
+              ></span>
+              <div class="line-height-1">
+                <span class="text-gray-600 text-xs">Your Location</span>
+                <div class="line-height-1">
+                  <select
+                    class="js-example-basic-single border border-gray-200 border-r-0"
+                    name="state"
+                  >
+                    <option value="1">Mumbai</option>
+                    <option value="2">Delhi</option>
+                    <option value="3">Bangalore</option>
+                    <option value="4">Hyderabad</option>
+                    <option value="5">Chennai</option>
+                    <option value="6">Kolkata</option>
+                    <option value="7">Pune</option>
+                    <option value="8">Jaipur</option>
+                    <option value="9">Ahmedabad</option>
+                    <option value="10">Lucknow</option>
+                    <option value="11">Surat</option>
+                    <option value="12">Bhopal</option>
+                    <option value="13">Chandigarh</option>
+                    <option value="14">Visakhapatnam</option>
+                    <option value="15">Noida</option>
+                    <option value="16">Kochi</option>
+                    <option value="17">Kanpur</option>
+                    <option value="18">Nagpur</option>
+                    <option value="19">Indore</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </form>
+          <div class="header-right items-center xl:block hidden">
+            <div class="flex items-center flex-wrap gap-12">
+              <button
+                type="button"
+                class="search-icon flex items-center xl:hidden flex gap-4 item-hover"
+              >
+                <span
+                  class="text-2xl text-gray-700 flex relative item-hover__text"
+                  ><i class="ph ph-magnifying-glass"></i
+                ></span>
+              </button>
+              <a href="#" class="flex items-center gap-4 item-hover"
+                ><span
+                  class="text-2xl text-gray-700 flex relative me-6 mt-6 item-hover__text"
+                  ><i class="ph ph-heart"></i>
+                  <span
+                    class="w-16 h-16 flex items-center justify-center rounded-[50%] bg-main-600 text-white text-xs absolute top-n6 end-n4"
+                    >2</span
+                  > </span
+                ><span
+                  class="text-md text-gray-500 item-hover__text hidden xl:flex"
+                  >Wishlist</span
+                > </a
+              ><a href="#" class="flex items-center gap-4 item-hover"
+                ><span
+                  class="text-2xl text-gray-700 flex relative me-6 mt-6 item-hover__text"
+                  ><i class="ph ph-shopping-cart-simple"></i>
+                  <span
+                    class="w-16 h-16 flex items-center justify-center rounded-[50%] bg-main-600 text-white text-xs absolute top-n6 end-n4"
+                    >2</span
+                  > </span
+                ><span
+                  class="text-md text-gray-500 item-hover__text hidden xl:flex"
+                  >Cart</span
+                ></a
+              >
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <header class="header bg-white border-b border-gray-100">
+      <div class="container container-lg">
+        <nav class="header-inner flex justify-between gap-8">
+          <div class="flex items-center menu-category-wrapper">
+            <div class="category on-hover-item">
+              <button
+                type="button"
+                class="category__button flex items-center gap-8 font-[500] p-16 border-r border-l border-gray-100 text-heading"
+              >
+                <span class="icon text-2xl sm:flex hidden"
+                  ><i class="ph ph-dots-nine"></i
+                ></span>
+                <span class="md:flex hidden">All</span> Categories
+                <span class="arrow-icon text-xl flex"
+                  ><i class="ph ph-caret-down"></i
+                ></span>
+              </button>
+              <div
+                class="responsive-dropdown on-hover-dropdown common-dropdown nav-submenu p-0 submenus-submenu-wrapper"
+              >
+                <button
+                  type="button"
+                  class="close-responsive-dropdown rounded-[50%] text-xl absolute right-0 inset-block-start-0 mt-4 me-8 xl:hidden flex"
+                >
+                  <i class="ph ph-x"></i>
+                </button>
+                <div class="logo px-16 xl:hidden block">
+                  <a href="#" class="link"
+                    ><img src="images/logo.png" alt="Logo"
+                  /></a>
+                </div>
+                <ul class="scroll-sm p-0 py-8 w-210 max-h-400 overflow-y-auto">
+                  <li class="has-submenus-submenu" value="1">
+                    <a
+                      href="#"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="nav-item-cat"
+                    >
+                      Rishabh Paints
+                    </a>
+                  </li>
+                  <li class="has-submenus-submenu" value="1">
+                    <a
+                      href="#"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="nav-item-cat"
+                      >Rishabh Hardware</a
+                    >
+                  </li>
+                  <li class="has-submenus-submenu" value="1">
+                    <a
+                      href="#"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="nav-item-cat"
+                      >Refresh Sanitary</a
+                    >
+                  </li>
+                  <li class="has-submenus-submenu" value="1">
+                    <a
+                      href="#"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="nav-item-cat"
+                      >Royal Tiles</a
+                    >
+                  </li>
+                  <li class="has-submenus-submenu" value="1">
+                    <a
+                      href=""
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="nav-item-cat"
+                      >Rishabh Electronics</a
+                    >
+                  </li>
+                  <li class="has-submenus-submenu" value="1">
+                    <a
+                      href="#"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="nav-item-cat"
+                    >
+                      Arpit Pipe
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="header-menu xl:block hidden">
+              <ul class="nav-menu flex items-center">
+                <!-- <li class="on-hover-item nav-menu__item has-submenu activePage"> -->
+                <li class="on-hover-item nav-menu__item activePage">
+                  <a href="#" class="nav-menu__link">Home</a>
+                </li>
+                <li class="on-hover-item nav-menu__item">
+                  <a href="#" class="nav-menu__link">About Us</a>
+                </li>
+                <li class="on-hover-item nav-menu__item">
+                  <a href="#" class="nav-menu__link">Shop</a>
+                </li>
+                <li class="on-hover-item nav-menu__item">
+                  <a href="#" class="nav-menu__link">Offers</a>
+                </li>
+                <li class="nav-menu__item">
+                  <a href="#" class="nav-menu__link">Contact Us</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="header-right flex items-center">
+            <a
+              href="tel:09451555272"
+              class="btn-main-two text-white p-12 h-full flex items-center gap-8 text-lg xl:flex hidden"
+              ><div class="flex text-32"><i class="ph ph-phone-call"></i></div>
+              +91 9451555272</a
+            >
+            <div class="me-16 xl:hidden block">
+              <div class="flex items-center flex-wrap gap-12">
+                <button
+                  type="button"
+                  class="search-icon flex items-center xl:hidden flex gap-4 item-hover"
+                >
+                  <span
+                    class="text-2xl text-gray-700 flex relative item-hover__text"
+                    ><i class="ph ph-magnifying-glass"></i
+                  ></span>
+                </button>
+                <a href="#" class="flex items-center gap-4 item-hover"
+                  ><span
+                    class="text-2xl text-gray-700 flex relative me-6 mt-6 item-hover__text"
+                    ><i class="ph ph-heart"></i>
+                    <span
+                      class="w-16 h-16 flex items-center justify-center rounded-[50%] bg-main-600 text-white text-xs absolute top-n6 end-n4"
+                      >2</span
+                    > </span
+                  ><span
+                    class="text-md text-gray-500 item-hover__text hidden xl:flex"
+                    >Wishlist</span
+                  > </a
+                ><a href="#" class="flex items-center gap-4 item-hover"
+                  ><span
+                    class="text-2xl text-gray-700 flex relative me-6 mt-6 item-hover__text"
+                    ><i class="ph ph-shopping-cart-simple"></i>
+                    <span
+                      class="w-16 h-16 flex items-center justify-center rounded-[50%] bg-main-600 text-white text-xs absolute top-n6 end-n4"
+                      >2</span
+                    > </span
+                  ><span
+                    class="text-md text-gray-500 item-hover__text hidden xl:flex"
+                    >Cart</span
+                  ></a
+                >
+              </div>
+            </div>
+            <button
+              type="button"
+              class="toggle-mobileMenu xl:hidden ms-3n text-gray-800 text-4xl flex"
+            >
+              <i class="ph ph-list"></i>
+            </button>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <section class="contact py-80">
+      <div class="container container-lg">
+        <div class="row g-5">
+          <div class="xl:w-8/12 flex-grow-0 flex-shrink-0 basis-auto">
+            <div
+              class="contact-box border border-gray-100 rounded-16 px-24 py-40"
+            >
+              <form action="#">
+                <h6 class="mb-32">Make Custom Request</h6>
+                <div class="row g-4">
+                  <div
+                    class="md:w-6/12 flex-grow-0 flex-shrink-0 basis-auto custom-sm:w-6/12"
+                  >
+                    <label
+                      for="name"
+                      class="flex items-center gap-4 text-sm font-heading-two text-gray-900 font-[600] mb-4"
+                      >Full Name
+                      <span class="text-danger text-xl line-height-1"
+                        >*</span
+                      ></label
+                    >
+                    <input
+                      class="common-input px-16"
+                      id="name"
+                      placeholder="Full name"
+                    />
+                  </div>
+                  <div
+                    class="md:w-6/12 flex-grow-0 flex-shrink-0 basis-auto custom-sm:w-6/12"
+                  >
+                    <label
+                      for="email"
+                      class="flex items-center gap-4 text-sm font-heading-two text-gray-900 font-[600] mb-4"
+                      >Email Address
+                      <span class="text-danger text-xl line-height-1"
+                        >*</span
+                      ></label
+                    >
+                    <input
+                      type="email"
+                      class="common-input px-16"
+                      id="email"
+                      placeholder="Email address"
+                    />
+                  </div>
+                  <div
+                    class="md:w-6/12 flex-grow-0 flex-shrink-0 basis-auto custom-sm:w-6/12"
+                  >
+                    <label
+                      for="phone"
+                      class="flex items-center gap-4 text-sm font-heading-two text-gray-900 font-[600] mb-4"
+                      >Phone Number<span
+                        class="text-danger text-xl line-height-1"
+                        >*</span
+                      ></label
+                    >
+                    <input
+                      type="number"
+                      class="common-input px-16"
+                      id="phone"
+                      placeholder="Phone Number*"
+                    />
+                  </div>
+                  <div
+                    class="md:w-6/12 flex-grow-0 flex-shrink-0 basis-auto custom-sm:w-6/12"
+                  >
+                    <label
+                      for="subject"
+                      class="flex items-center gap-4 text-sm font-heading-two text-gray-900 font-[600] mb-4"
+                      >Subject
+                      <span class="text-danger text-xl line-height-1"
+                        >*</span
+                      ></label
+                    >
+                    <input
+                      class="common-input px-16"
+                      id="subject"
+                      placeholder="Subject"
+                    />
+                  </div>
+                  <div class="md:w-full flex-grow-0 flex-shrink-0 basis-auto">
+                    <label
+                      for="message"
+                      class="flex items-center gap-4 text-sm font-heading-two text-gray-900 font-[600] mb-4"
+                      >Message
+                      <span class="text-danger text-xl line-height-1"
+                        >*</span
+                      ></label
+                    >
+                    <textarea
+                      class="common-input px-16"
+                      id="message"
+                      placeholder="Type your message"
+                    ></textarea>
+                  </div>
+                  <div
+                    class="md:w-full flex-grow-0 flex-shrink-0 basis-auto mt-16"
+                  >
+                    <button
+                      type="submit"
+                      class="btn btn-main py-18 px-32 rounded-8"
+                    >
+                      Get a Quote
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="xl:w-4/12 flex-grow-0 flex-shrink-0 basis-auto">
+            <div
+              class="contact-box border border-gray-100 rounded-16 px-24 py-40"
+            >
+              <h6 class="mb-48">Get In Touch</h6>
+              <div class="flex items-center gap-16 mb-16">
+                <span
+                  class="w-40 h-40 flex items-center justify-center rounded-[50%] border border-gray-100 text-main-two-600 text-2xl flex-shrink-0"
+                  ><i class="ph-fill ph-phone-call"></i
+                ></span>
+                <a
+                  href="tel:+91 94515 55272"
+                  class="text-md text-gray-900 hover-text-main-600"
+                  >+91 94515 55272</a
+                >
+              </div>
+              <div class="flex items-center gap-16 mb-16">
+                <span
+                  class="w-40 h-40 flex items-center justify-center rounded-[50%] border border-gray-100 text-main-two-600 text-2xl flex-shrink-0"
+                  ><i class="ph-fill ph-envelope"></i
+                ></span>
+                <a
+                  href="mailto:support24@marketpro.com"
+                  class="text-md text-gray-900 hover-text-main-600"
+                  >support24@marketpro.com</a
+                >
+              </div>
+              <div class="flex items-center gap-16 mb-0">
+                <span
+                  class="w-40 h-40 flex items-center justify-center rounded-[50%] border border-gray-100 text-main-two-600 text-2xl flex-shrink-0"
+                  ><i class="ph-fill ph-map-pin"></i
+                ></span>
+                <span class="text-md text-gray-900"
+                  >9RQR+5WC, Mohiuddinpur, Uttar Pradesh 209821, India</span
+                >
+              </div>
+            </div>
+            <div class="mt-24 flex items-center flex-wrap gap-16">
+              <a
+                href="tel:+91 94515 55272"
+                class="bg-neutral-600 hover-bg-main-600 rounded-8 p-10 px-16 flex-between flex-wrap gap-8 flex-grow"
+                ><span class="text-white font-[500]">Get Support On Call</span>
+                <span
+                  class="w-36 h-36 bg-main-600 rounded-8 flex items-center justify-center text-xl text-white"
+                  ><i class="ph ph-headset"></i
+                ></span> </a
+              ><a
+                href="https://www.google.com/maps/place/9RQR%2B5WC,+Mohiuddinpur,+Uttar+Pradesh+209821/@26.3879,80.8422,17z/data=!4m5!3m4!1s0x399b89a109f3ced7:0x6e13a7c6ce7c999e!8m2!3d26.3879375!4d80.8422656?entry=ttu&g_ep=EgoyMDI1MDIwNS4xIKXMDSoASAFQAw%3D%3D"
+                target="_blank"
+                class="bg-neutral-600 hover-bg-main-600 rounded-8 p-10 px-16 flex-between flex-wrap gap-8 flex-grow"
+                ><span class="text-white font-[500]">Get Direction</span>
+                <span
+                  class="w-36 h-36 bg-main-600 rounded-8 flex items-center justify-center text-xl text-white"
+                  ><i class="ph ph-map-pin"></i></span
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Shipping -->
+    <section class="shipping mb-24" id="shipping">
+      <div class="container container-lg">
+        <div class="row g-4">
+          <div
+            class="custom-2xl:w-3/12 flex-grow-0 flex-shrink-0 basis-auto md:w-6/12"
+            data-aos="zoom-in"
+            data-aos-duration="400"
+          >
+            <div
+              class="shipping-item flex items-center gap-16 rounded-16 bg-main-100 transition-2"
+            >
+              <span
+                class="w-56 h-56 flex items-center justify-center rounded-[50%] bg-main-600 text-white text-32 flex-shrink-0"
+                ><i class="ph-fill ph-car-profile"></i
+              ></span>
+              <div class="">
+                <h6 class="mb-0">Free Shipping</h6>
+                <span class="text-sm text-heading"
+                  >Free shipping all over the US</span
+                >
+              </div>
+            </div>
+          </div>
+          <div
+            class="custom-2xl:w-3/12 flex-grow-0 flex-shrink-0 basis-auto md:w-6/12"
+            data-aos="zoom-in"
+            data-aos-duration="600"
+          >
+            <div
+              class="shipping-item flex items-center gap-16 rounded-16 bg-main-100 transition-2"
+            >
+              <span
+                class="w-56 h-56 flex items-center justify-center rounded-[50%] bg-main-600 text-white text-32 flex-shrink-0"
+                ><i class="ph-fill ph-hand-heart"></i
+              ></span>
+              <div class="">
+                <h6 class="mb-0">100% Satisfaction</h6>
+                <span class="text-sm text-heading"
+                  >Free shipping all over the US</span
+                >
+              </div>
+            </div>
+          </div>
+          <div
+            class="custom-2xl:w-3/12 flex-grow-0 flex-shrink-0 basis-auto md:w-6/12"
+            data-aos="zoom-in"
+            data-aos-duration="800"
+          >
+            <div
+              class="shipping-item flex items-center gap-16 rounded-16 bg-main-100 transition-2"
+            >
+              <span
+                class="w-56 h-56 flex items-center justify-center rounded-[50%] bg-main-600 text-white text-32 flex-shrink-0"
+                ><i class="ph-fill ph-credit-card"></i
+              ></span>
+              <div class="">
+                <h6 class="mb-0">Secure Payments</h6>
+                <span class="text-sm text-heading"
+                  >Free shipping all over the US</span
+                >
+              </div>
+            </div>
+          </div>
+          <div
+            class="custom-2xl:w-3/12 flex-grow-0 flex-shrink-0 basis-auto md:w-6/12"
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+          >
+            <div
+              class="shipping-item flex items-center gap-16 rounded-16 bg-main-100 transition-2"
+            >
+              <span
+                class="w-56 h-56 flex items-center justify-center rounded-[50%] bg-main-600 text-white text-32 flex-shrink-0"
+                ><i class="ph-fill ph-chats"></i
+              ></span>
+              <div class="">
+                <h6 class="mb-0">24/7 Support</h6>
+                <span class="text-sm text-heading"
+                  >Free shipping all over the US</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer py-52">
+      <img src="images/body-bottom-bg.png" alt="BG" class="body-bottom-bg" />
+      <div class="container container-lg">
+        <div class="footer-item-wrapper flex items-start flex-wrap">
+          <div class="footer-item" data-aos="fade-up" data-aos-duration="200">
+            <!-- <div class="footer-item__logo border border-2 border-red-900 flex justify-center items-center"> -->
+            <div class="footer-item__logo">
+              <a href="#"
+                ><img
+                  src="images/logo.png"
+                  style="padding-left: 30px"
+                  alt="Image"
+              /></a>
+            </div>
+            <p class="mb-24">
+              We're BuildMart Shop, an innovative team of suppliers.
+            </p>
+            <div class="flex items-center gap-16 mb-16">
+              <span
+                class="w-32 h-32 flex items-center justify-center rounded-[50%] bg-main-600 text-white text-md flex-shrink-0"
+                ><i class="ph-fill ph-map-pin"></i
+              ></span>
+              <span class="text-md text-gray-900"
+                >9RQR+5WC, Mohiuddinpur, Uttar Pradesh 209821, India</span
+              >
+            </div>
+            <div class="flex items-center gap-16 mb-16">
+              <span
+                class="w-32 h-32 flex items-center justify-center rounded-[50%] bg-main-600 text-white text-md flex-shrink-0"
+                ><i class="ph-fill ph-phone-call"></i
+              ></span>
+              <div class="flex items-center gap-16 flex-wrap">
+                <a
+                  href="tel:+91 94515 55272"
+                  class="text-md text-gray-900 hover-text-main-600"
+                  >+91 94515 55272</a
+                >
+                <!-- <span class="text-md text-main-600">or</span>
+                <a
+                  href="tel:+00987654012"
+                  class="text-md text-gray-900 hover-text-main-600"
+                  >+00 987 654 012</a
+                > -->
+              </div>
+            </div>
+            <div class="flex items-center gap-16 mb-16">
+              <span
+                class="w-32 h-32 flex items-center justify-center rounded-[50%] bg-main-600 text-white text-md flex-shrink-0"
+                ><i class="ph-fill ph-envelope"></i
+              ></span>
+              <a
+                href="mailto:wedealinbest@gmail.com"
+                class="text-md text-gray-900 hover-text-main-600"
+                >wedealinbest@gmail.com</a
+              >
+            </div>
+          </div>
+          <!-- Pages -->
+          <div class="footer-item" data-aos="fade-up" data-aos-duration="400">
+            <h6 class="footer-item__title">Pages</h6>
+            <ul class="footer-menu">
+              <li class="mb-16">
+                <a href="index.html" class="text-gray-600 hover-text-main-600"
+                  >Home</a
+                >
+              </li>
+              <li class="mb-16">
+                <a href="#" class="text-gray-600 hover-text-main-600"
+                  >About Us</a
+                >
+              </li>
+              <li class="mb-16">
+                <a href="#" class="text-gray-600 hover-text-main-600">Shop</a>
+              </li>
+              <li class="mb-16">
+                <a href="#" class="text-gray-600 hover-text-main-600">Offers</a>
+              </li>
+              <li class="mb-16">
+                <a href="contact.html" class="text-gray-600 hover-text-main-600"
+                  >Contact Us</a
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- Customer Support -->
+          <div class="footer-item" data-aos="fade-up" data-aos-duration="600">
+            <h6 class="footer-item__title">Customer Support</h6>
+            <ul class="footer-menu">
+              <li class="mb-16">
+                <a href="contact.html" class="text-gray-600 hover-text-main-600"
+                  >Help Center</a
+                >
+              </li>
+              <li class="mb-16">
+                <a href="contact.html" class="text-gray-600 hover-text-main-600"
+                  >Contact Us</a
+                >
+              </li>
+              <li class="mb-16">
+                <a href="contact.html" class="text-gray-600 hover-text-main-600"
+                  >Report Abuse</a
+                >
+              </li>
+              <li class="mb-16">
+                <a href="#" class="text-gray-600 hover-text-main-600"
+                  >Submit and Dispute</a
+                >
+              </li>
+              <li class="mb-16">
+                <a href="#" class="text-gray-600 hover-text-main-600"
+                  >Policies & Rules</a
+                >
+              </li>
+              <li class="">
+                <a href="#" class="text-gray-600 hover-text-main-600"
+                  >Online Shopping</a
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- My Account -->
+          <div class="footer-item" data-aos="fade-up" data-aos-duration="800">
+            <h6 class="footer-item__title">My Account</h6>
+            <ul class="footer-menu">
+              <li class="mb-16">
+                <a href="#" class="text-gray-600 hover-text-main-600"
+                  >My Account</a
+                >
+              </li>
+              <li class="mb-16">
+                <a href="#" class="text-gray-600 hover-text-main-600"
+                  >Order History</a
+                >
+              </li>
+              <li class="mb-16">
+                <a href="#" class="text-gray-600 hover-text-main-600"
+                  >Shoping Cart</a
+                >
+              </li>
+              <li class="mb-16">
+                <a href="#" class="text-gray-600 hover-text-main-600"
+                  >Compare</a
+                >
+              </li>
+              <li class="mb-16">
+                <a href="#" class="text-gray-600 hover-text-main-600"
+                  >Help Ticket</a
+                >
+              </li>
+              <li class="">
+                <a href="#" class="text-gray-600 hover-text-main-600"
+                  >Wishlist</a
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- Our Categories -->
+          <div class="footer-item" data-aos="fade-up" data-aos-duration="1000">
+            <h6 class="footer-item__title">Our Categories</h6>
+            <ul class="footer-menu">
+              <li class="mb-16">
+                <a href="#" class="text-gray-600 hover-text-main-600"
+                  >Rishabh Paints</a
+                >
+              </li>
+              <li class="mb-16">
+                <a href="#" class="text-gray-600 hover-text-main-600"
+                  >Rishabh Hardware</a
+                >
+              </li>
+              <li class="mb-16">
+                <a href="#" class="text-gray-600 hover-text-main-600"
+                  >Refresh Sanitary</a
+                >
+              </li>
+              <li class="mb-16">
+                <a href="#" class="text-gray-600 hover-text-main-600"
+                  >Royal Tiles</a
+                >
+              </li>
+              <li class="mb-16">
+                <a href="#" class="text-gray-600 hover-text-main-600"
+                  >Rishabh Electronics</a
+                >
+              </li>
+              <li class="">
+                <a href="#" class="text-gray-600 hover-text-main-600"
+                  >Arpit Pipe</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="footer-item" data-aos="fade-up" data-aos-duration="1200">
+            <h6 class="">Shop on The Go</h6>
+            <p class="mb-16">BuildMart App is available. Get it now</p>
+            <div class="flex items-center gap-8 my-32">
+              <a href="https://www.apple.com/store" class=""
+                ><img src="images/store-img1.png" alt="Image" /> </a
+              ><a href="https://play.google.com/store/apps?hl=en" class=""
+                ><img src="images/store-img2.png" alt="Image"
+              /></a>
+            </div>
+            <ul class="flex items-center gap-16">
+              <li>
+                <a
+                  href="#"
+                  class="w-44 h-44 flex items-center justify-center bg-main-100 text-main-600 text-xl rounded-[50%] hover-bg-main-600 hover-text-white"
+                  ><i class="ph-fill ph-facebook-logo"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="w-44 h-44 flex items-center justify-center bg-main-100 text-main-600 text-xl rounded-[50%] hover-bg-main-600 hover-text-white"
+                  ><i class="ph-fill ph-twitter-logo"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="w-44 h-44 flex items-center justify-center bg-main-100 text-main-600 text-xl rounded-[50%] hover-bg-main-600 hover-text-white"
+                  ><i class="ph-fill ph-instagram-logo"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="w-44 h-44 flex items-center justify-center bg-main-100 text-main-600 text-xl rounded-[50%] hover-bg-main-600 hover-text-white"
+                  ><i class="ph-fill ph-linkedin-logo"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Copyright Section -->
+    <div class="bottom-footer bg-color-one py-8">
+      <div class="container container-lg">
+        <div class="bottom-footer__inner flex-between flex-wrap gap-16 py-16">
+          <p class="bottom-footer__text wow fadeInLeftBig">
+            All Rights Reserved &copy; 2025 By BuildMart | Developed By Axsem
+            Softwares
+          </p>
+          <div class="flex items-center gap-8 flex-wrap wow fadeInRightBig">
+            <span class="text-heading text-sm">We Are Accepting</span>
+            <img src="images/payment-method.png" alt="Image" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
