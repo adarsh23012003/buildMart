@@ -1731,13 +1731,13 @@
                   max: 25,
                   values: [0, 25],
                   slide: function (t, i) {
-                    e("#amount").val("$" + i.values[0] + " - $" + i.values[1]);
+                    e("#amount").val("₹" + i.values[0] + " - ₹" + i.values[1]);
                   },
                 }),
                   e("#amount").val(
-                    "$" +
+                    "₹" +
                       e("#slider-range").slider("values", 0) +
-                      " - $" +
+                      " - ₹" +
                       e("#slider-range").slider("values", 1)
                   );
               }),
@@ -3482,13 +3482,11 @@
                           var v = l.height();
                           i.removeAttr("style"),
                             l.height(v),
-                            l
-                              .find(".js-marquee")
-                              .css({
-                                float: "none",
-                                "margin-bottom": a.gap,
-                                "margin-right": 0,
-                              }),
+                            l.find(".js-marquee").css({
+                              float: "none",
+                              "margin-bottom": a.gap,
+                              "margin-right": 0,
+                            }),
                             a.duplicated &&
                               l
                                 .find(".js-marquee:last")
