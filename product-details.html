@@ -1,0 +1,2348 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>BuildMart - Order Online</title>
+    <link rel="shortcut icon" href="images/logo.png" />
+    <script defer="defer" src="js/app.bundle.js"></script>
+    <link href="css/app.min.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div
+      class="preloader fixed inset-0 z-[9999] flex justify-center items-center bg-white"
+    >
+      <div class="loader">
+        <img src="images/logo.png" alt="Image" class="" />
+      </div>
+    </div>
+    <div class="overlay"></div>
+    <div class="side-overlay"></div>
+    <div
+      class="progress-wrap fixed right-[36px] bottom-[36px] h-[46px] w-[46px] leading-[46px] cursor-pointer block rounded-[50px] shadow-inset z-[10000] opacity-0 invisible translate-y-[15px] transition-all duration-200 ease-linear bg-transparent max-lg:right-[24px] max-lg:bottom-[24px] max-lg:h-[40px] max-lg:w-[40px] max-lg:leading-[40px] hover:scale-[1.06] after:absolute after:font-[900] after:text-center after:w-[46px] after:h-[46px] after:leading-[46px] after:text-[18px] after:left-0 after:top-0 after:cursor-pointer after:block after:content-['\e08e'] after:font-phospor after:z-[1] after:transition-all after:duration-200 after:ease-linear after:text-main max-lg:after:h-[40px] max-lg:after:w-[40px] max-lg:after:leading-[40px]"
+    >
+      <svg
+        class="progress-circle svg-content"
+        width="100%"
+        height="100%"
+        viewBox="-1 -1 102 102"
+      >
+        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+      </svg>
+    </div>
+    <form action="#" class="search-box">
+      <button
+        type="button"
+        class="search-box__close absolute inset-block-start-0 right-0 m-16 w-48 h-48 border border-gray-100 rounded-[50%] flex items-center justify-center text-white hover-text-gray-800 hover-bg-white text-2xl transition-1"
+      >
+        <i class="ph ph-x"></i>
+      </button>
+      <div class="container">
+        <div class="relative">
+          <input
+            class="form-control block w-full p-[0.375rem_0.75rem] leading-6 text-[#495057] bg-white bg-clip-padding border border-[#ced4da] transition-all duration-150 ease-in-out focus:text-[#495057] focus:bg-white focus:border-main focus:outline-0 focus:shadow-none py-16 px-24 text-xl rounded-[50rem] pe-64 h-[64px]"
+            placeholder="Search for a product or brand"
+          />
+          <button
+            type="submit"
+            class="w-48 h-48 bg-main-600 rounded-[50%] flex items-center justify-center text-xl text-white absolute top-[50%] translate-y-[-50%] right-0 me-8"
+          >
+            <i class="ph ph-magnifying-glass"></i>
+          </button>
+        </div>
+      </div>
+    </form>
+    <!-- Mobile Menu -->
+    <div class="mobile-menu scroll-sm xl:hidden block">
+      <button type="button" class="close-button">
+        <i class="ph ph-x"></i>
+      </button>
+      <div class="mobile-menu__inner">
+        <a href="#" class="mobile-menu__logo"
+          ><img src="images/logo.png" alt="Logo"
+        /></a>
+        <div class="mobile-menu__menu">
+          <ul class="nav-menu flex items-center nav-menu--mobile">
+            <li class="nav-menu__item">
+              <a href="index.html" class="nav-menu__link">Home</a>
+            </li>
+            <li class="nav-menu__item">
+              <a href="#" class="nav-menu__link">About Us</a>
+            </li>
+            <li class="nav-menu__item">
+              <a href="shop.html" class="nav-menu__link">Shop</a>
+            </li>
+            <li class="nav-menu__item">
+              <a href="#" class="nav-menu__link">Offers</a>
+            </li>
+            <li class="nav-menu__item">
+              <a href="contact.html" class="nav-menu__link">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="header-top bg-success-600 flex-between">
+      <div class="container container-lg">
+        <div class="flex-between flex-wrap gap-8">
+          <ul class="flex items-center flex-wrap hidden lg:flex">
+            <li class="border-right-item">
+              <a
+                href="#shipping"
+                class="text-white text-sm hover-text-decoration-underline"
+                >About us</a
+              >
+            </li>
+            <li class="border-right-item">
+              <a
+                href="#shipping"
+                class="text-white text-sm hover-text-decoration-underline"
+                >Free Delivery</a
+              >
+            </li>
+            <li class="border-right-item">
+              <a
+                href="#shipping"
+                class="text-white text-sm hover-text-decoration-underline"
+                >Returns Policy</a
+              >
+            </li>
+          </ul>
+          <ul class="header-top__right flex items-center flex-wrap">
+            <li
+              class="on-hover-item border-right-item border-right-item-sm-space has-submenu arrow-white"
+            >
+              <a href="#" class="text-white text-sm py-8">Help Center</a>
+              <ul
+                class="on-hover-dropdown common-dropdown common-dropdown--sm max-h-200 scroll-sm px-0 py-8"
+              >
+                <li class="nav-submenu__item">
+                  <a
+                    href="index.html"
+                    class="nav-submenu__link hover-bg-gray-100 text-gray-500 text-xs py-6 px-16 flex items-center gap-8 rounded-none"
+                    ><span class="text-sm flex"
+                      ><i class="ph ph-headset"></i
+                    ></span>
+                    Call Center</a
+                  >
+                </li>
+                <li class="nav-submenu__item">
+                  <a
+                    href="index.html"
+                    class="nav-submenu__link hover-bg-gray-100 text-gray-500 text-xs py-6 px-16 flex items-center gap-8 rounded-none"
+                    ><span class="text-sm flex"
+                      ><i class="ph ph-chat-circle-dots"></i
+                    ></span>
+                    Live Chat</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li
+              class="on-hover-item border-right-item border-right-item-sm-space has-submenu arrow-white"
+            >
+              <a
+                href="javascript:void(0)"
+                class="selected-text text-white text-sm py-8"
+                >Eng</a
+              >
+              <ul
+                class="selectable-text-list on-hover-dropdown common-dropdown common-dropdown--sm max-h-200 scroll-sm px-0 py-8"
+              >
+                <li>
+                  <a
+                    href="javascript:void(0)"
+                    class="hover-bg-gray-100 text-gray-500 text-xs py-6 px-16 flex items-center gap-8 rounded-none"
+                    ><img
+                      src="images/flag1.png"
+                      alt="Image"
+                      class="w-16 h-12 rounded-4 border border-gray-100"
+                    />
+                    English</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="javascript:void(0)"
+                    class="hover-bg-gray-100 text-gray-500 text-xs py-6 px-16 flex items-center gap-8 rounded-none"
+                    ><img
+                      src="images/india.png"
+                      alt="Image"
+                      class="w-16 h-12 rounded-4 border border-gray-100"
+                    />
+                    Hindi</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li
+              class="on-hover-item border-right-item border-right-item-sm-space has-submenu arrow-white"
+            >
+              <a
+                href="javascript:void(0)"
+                class="selected-text text-white text-sm py-8"
+                >USD</a
+              >
+            </li>
+            <li class="border-right-item">
+              <a
+                href="#"
+                class="text-white text-sm py-8 flex items-center gap-6"
+                ><span class="icon text-md flex"
+                  ><i class="ph ph-user-circle"></i> </span
+                ><span class="hover-text-decoration-underline"
+                  >My Account</span
+                ></a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <header class="header-middle bg-color-one border-b border-gray-100">
+      <div class="container container-lg">
+        <nav class="header-inner flex-between">
+          <div class="logo">
+            <a href="#" class="link"
+              ><img src="images/logo.png" alt="Logo"
+            /></a>
+          </div>
+          <form
+            action="#"
+            class="flex items-center flex-wrap form-location-wrapper"
+          >
+            <div
+              class="search-category flex h-48 select-border-r-0 radius-end-0 search-form md:flex hidden"
+            >
+              <select
+                class="js-example-basic-single border border-gray-200 border-r-0"
+                name="state"
+              >
+                <option value="1" selected="selected" disabled="disabled">
+                  All Categories
+                </option>
+                <option value="1">Rishabh Paints</option>
+                <option value="1">Rishabh Hardware</option>
+                <option value="1">Refresh Sanitary</option>
+                <option value="1">Royal Tiles</option>
+                <option value="1">Rishabh Electronics</option>
+                <option value="1">Arpit Pipe</option>
+              </select>
+              <div class="search-form__wrapper relative">
+                <input
+                  class="search-form__input common-input py-13 ps-16 pe-18 !rounded-tr-[50rem] !rounded-br-[50rem] pe-44"
+                  placeholder="Search for a product or brand"
+                />
+                <button
+                  type="submit"
+                  class="w-32 h-32 bg-main-600 rounded-[50%] flex items-center justify-center text-xl text-white absolute top-[50%] translate-y-[-50%] right-0 me-8"
+                >
+                  <i class="ph ph-magnifying-glass"></i>
+                </button>
+              </div>
+            </div>
+            <div
+              class="location-box bg-white flex items-center gap-8 py-6 px-16 rounded-[50rem] border border-gray-100"
+            >
+              <span class="text-gray-900 text-xl sm:flex hidden"
+                ><i class="ph ph-map-pin"></i
+              ></span>
+              <div class="line-height-1">
+                <span class="text-gray-600 text-xs">Your Location</span>
+                <div class="line-height-1">
+                  <select
+                    class="js-example-basic-single border border-gray-200 border-r-0"
+                    name="state"
+                  >
+                    <option value="1">Mumbai</option>
+                    <option value="2">Delhi</option>
+                    <option value="3">Bangalore</option>
+                    <option value="4">Hyderabad</option>
+                    <option value="5">Chennai</option>
+                    <option value="6">Kolkata</option>
+                    <option value="7">Pune</option>
+                    <option value="8">Jaipur</option>
+                    <option value="9">Ahmedabad</option>
+                    <option value="10">Lucknow</option>
+                    <option value="11">Surat</option>
+                    <option value="12">Bhopal</option>
+                    <option value="13">Chandigarh</option>
+                    <option value="14">Visakhapatnam</option>
+                    <option value="15">Noida</option>
+                    <option value="16">Kochi</option>
+                    <option value="17">Kanpur</option>
+                    <option value="18">Nagpur</option>
+                    <option value="19">Indore</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </form>
+          <div class="header-right items-center xl:block hidden">
+            <div class="flex items-center flex-wrap gap-12">
+              <button
+                type="button"
+                class="search-icon flex items-center xl:hidden flex gap-4 item-hover"
+              >
+                <span
+                  class="text-2xl text-gray-700 flex relative item-hover__text"
+                  ><i class="ph ph-magnifying-glass"></i
+                ></span>
+              </button>
+              <a href="#" class="flex items-center gap-4 item-hover"
+                ><span
+                  class="text-2xl text-gray-700 flex relative me-6 mt-6 item-hover__text"
+                  ><i class="ph ph-heart"></i>
+                  <span
+                    class="w-16 h-16 flex items-center justify-center rounded-[50%] bg-main-600 text-white text-xs absolute top-n6 end-n4"
+                    >2</span
+                  > </span
+                ><span
+                  class="text-md text-gray-500 item-hover__text hidden xl:flex"
+                  >Wishlist</span
+                > </a
+              ><a href="cart.html" class="flex items-center gap-4 item-hover"
+                ><span
+                  class="text-2xl text-gray-700 flex relative me-6 mt-6 item-hover__text"
+                  ><i class="ph ph-shopping-cart-simple"></i>
+                  <span
+                    class="w-16 h-16 flex items-center justify-center rounded-[50%] bg-main-600 text-white text-xs absolute top-n6 end-n4"
+                    >2</span
+                  > </span
+                ><span
+                  class="text-md text-gray-500 item-hover__text hidden xl:flex"
+                  >Cart</span
+                ></a
+              >
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <header class="header bg-white border-b border-gray-100">
+      <div class="container container-lg">
+        <nav class="header-inner flex justify-between gap-8">
+          <div class="flex items-center menu-category-wrapper">
+            <div class="category on-hover-item">
+              <button
+                type="button"
+                class="category__button flex items-center gap-8 font-[500] p-16 border-r border-l border-gray-100 text-heading"
+              >
+                <span class="icon text-2xl sm:flex hidden"
+                  ><i class="ph ph-dots-nine"></i
+                ></span>
+                <span class="md:flex hidden">All</span> Categories
+                <span class="arrow-icon text-xl flex"
+                  ><i class="ph ph-caret-down"></i
+                ></span>
+              </button>
+              <div
+                class="responsive-dropdown on-hover-dropdown common-dropdown nav-submenu p-0 submenus-submenu-wrapper"
+              >
+                <button
+                  type="button"
+                  class="close-responsive-dropdown rounded-[50%] text-xl absolute right-0 inset-block-start-0 mt-4 me-8 xl:hidden flex"
+                >
+                  <i class="ph ph-x"></i>
+                </button>
+                <div class="logo px-16 xl:hidden block">
+                  <a href="#" class="link"
+                    ><img src="images/logo.png" alt="Logo"
+                  /></a>
+                </div>
+                <ul class="scroll-sm p-0 py-8 w-210 max-h-400 overflow-y-auto">
+                  <li class="has-submenus-submenu" value="1">
+                    <a
+                      href="#"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="nav-item-cat"
+                    >
+                      Rishabh Paints
+                    </a>
+                  </li>
+                  <li class="has-submenus-submenu" value="1">
+                    <a
+                      href="#"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="nav-item-cat"
+                      >Rishabh Hardware</a
+                    >
+                  </li>
+                  <li class="has-submenus-submenu" value="1">
+                    <a
+                      href="#"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="nav-item-cat"
+                      >Refresh Sanitary</a
+                    >
+                  </li>
+                  <li class="has-submenus-submenu" value="1">
+                    <a
+                      href="#"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="nav-item-cat"
+                      >Royal Tiles</a
+                    >
+                  </li>
+                  <li class="has-submenus-submenu" value="1">
+                    <a
+                      href=""
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="nav-item-cat"
+                      >Rishabh Electronics</a
+                    >
+                  </li>
+                  <li class="has-submenus-submenu" value="1">
+                    <a
+                      href="#"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="nav-item-cat"
+                    >
+                      Arpit Pipe
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="header-menu xl:block hidden">
+              <ul class="nav-menu flex items-center">
+                <!-- <li class="on-hover-item nav-menu__item has-submenu activePage"> -->
+                <li class="on-hover-item nav-menu__item activePage">
+                  <a href="index.html" class="nav-menu__link">Home</a>
+                </li>
+                <li class="on-hover-item nav-menu__item">
+                  <a href="about.html" class="nav-menu__link">About Us</a>
+                </li>
+                <li class="on-hover-item nav-menu__item">
+                  <a href="shop.html" class="nav-menu__link">Shop</a>
+                </li>
+                <li class="on-hover-item nav-menu__item">
+                  <a href="offers.html" class="nav-menu__link">Offers</a>
+                </li>
+                <li class="nav-menu__item">
+                  <a href="contact.html" class="nav-menu__link">Contact Us</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="header-right flex items-center">
+            <a
+              href="tel:09451555272"
+              class="btn-main-two text-white p-12 h-full flex items-center gap-8 text-lg xl:flex hidden"
+            >
+              <div class="flex text-32"><i class="ph ph-phone-call"></i></div>
+              +91 9451555272
+            </a>
+            <div class="me-16 xl:hidden block">
+              <div class="flex items-center flex-wrap gap-12">
+                <button
+                  type="button"
+                  class="search-icon flex items-center xl:hidden flex gap-4 item-hover"
+                >
+                  <span
+                    class="text-2xl text-gray-700 flex relative item-hover__text"
+                    ><i class="ph ph-magnifying-glass"></i
+                  ></span>
+                </button>
+                <a href="#" class="flex items-center gap-4 item-hover"
+                  ><span
+                    class="text-2xl text-gray-700 flex relative me-6 mt-6 item-hover__text"
+                    ><i class="ph ph-heart"></i>
+                    <span
+                      class="w-16 h-16 flex items-center justify-center rounded-[50%] bg-main-600 text-white text-xs absolute top-n6 end-n4"
+                      >2</span
+                    > </span
+                  ><span
+                    class="text-md text-gray-500 item-hover__text hidden xl:flex"
+                    >Wishlist</span
+                  > </a
+                ><a href="#" class="flex items-center gap-4 item-hover"
+                  ><span
+                    class="text-2xl text-gray-700 flex relative me-6 mt-6 item-hover__text"
+                    ><i class="ph ph-shopping-cart-simple"></i>
+                    <span
+                      class="w-16 h-16 flex items-center justify-center rounded-[50%] bg-main-600 text-white text-xs absolute top-n6 end-n4"
+                      >2</span
+                    > </span
+                  ><span
+                    class="text-md text-gray-500 item-hover__text hidden xl:flex"
+                    >Cart</span
+                  ></a
+                >
+              </div>
+            </div>
+            <button
+              type="button"
+              class="toggle-mobileMenu xl:hidden ms-3n text-gray-800 text-4xl flex"
+            >
+              <i class="ph ph-list"></i>
+            </button>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <section class="product-details py-80">
+      <div class="container container-lg">
+        <div class="row g-4">
+          <div class="xl:w-9/12 flex-grow-0 flex-shrink-0 basis-auto">
+            <div class="row g-4">
+              <div class="2xl:w-6/12 flex-grow-0 flex-shrink-0 basis-auto">
+                <div class="product-details__left">
+                  <div
+                    class="product-details__thumb-slider border border-gray-100 rounded-16"
+                  >
+                    <div class="">
+                      <div
+                        class="product-details__thumb flex items-center justify-center h-full"
+                      >
+                        <img src="images/offer-img1.png" alt="Image" />
+                      </div>
+                    </div>
+                    <div class="">
+                      <div
+                        class="product-details__thumb flex items-center justify-center h-full"
+                      >
+                        <img src="images/product-img16.png" alt="Image" />
+                      </div>
+                    </div>
+                    <div class="">
+                      <div
+                        class="product-details__thumb flex items-center justify-center h-full"
+                      >
+                        <img src="images/product-img11.png" alt="Image" />
+                      </div>
+                    </div>
+                    <div class="">
+                      <div
+                        class="product-details__thumb flex items-center justify-center h-full"
+                      >
+                        <img src="images/offer-img1.png" alt="Image" />
+                      </div>
+                    </div>
+                    <div class="">
+                      <div
+                        class="product-details__thumb flex items-center justify-center h-full"
+                      >
+                        <img src="images/product-img16.png" alt="Image" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mt-24">
+                    <div class="product-details__images-slider">
+                      <div>
+                        <div
+                          class="max-w-120 max-h-120 h-full flex items-center justify-center border border-gray-100 rounded-16 p-8"
+                        >
+                          <img src="images/product-img25.png" alt="Image" />
+                        </div>
+                      </div>
+                      <div>
+                        <div
+                          class="max-w-120 max-h-120 h-full flex items-center justify-center border border-gray-100 rounded-16 p-8"
+                        >
+                          <img src="images/product-img16.png" alt="Image" />
+                        </div>
+                      </div>
+                      <div>
+                        <div
+                          class="max-w-120 max-h-120 h-full flex items-center justify-center border border-gray-100 rounded-16 p-8"
+                        >
+                          <img src="images/product-img6.png" alt="Image" />
+                        </div>
+                      </div>
+                      <div>
+                        <div
+                          class="max-w-120 max-h-120 h-full flex items-center justify-center border border-gray-100 rounded-16 p-8"
+                        >
+                          <img src="images/product-img25.png" alt="Image" />
+                        </div>
+                      </div>
+                      <div>
+                        <div
+                          class="max-w-120 max-h-120 h-full flex items-center justify-center border border-gray-100 rounded-16 p-8"
+                        >
+                          <img src="images/product-img16.png" alt="Image" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="2xl:w-6/12 flex-grow-0 flex-shrink-0 basis-auto">
+                <div class="product-details__content">
+                  <h5 class="mb-12">
+                    Asian Paints ACE EXTERIOR EMULSION 10 LTR (WHITE) WHITE
+                    Emulsion Wall Paint (10 L)
+                  </h5>
+                  <div class="flex items-center flex-wrap gap-12">
+                    <div class="flex items-center gap-12 flex-wrap">
+                      <div class="flex items-center gap-8">
+                        <span class="text-15 font-[500] text-warning-600 flex"
+                          ><i class="ph-fill ph-star"></i
+                        ></span>
+                        <span class="text-15 font-[500] text-warning-600 flex"
+                          ><i class="ph-fill ph-star"></i
+                        ></span>
+                        <span class="text-15 font-[500] text-warning-600 flex"
+                          ><i class="ph-fill ph-star"></i
+                        ></span>
+                        <span class="text-15 font-[500] text-warning-600 flex"
+                          ><i class="ph-fill ph-star"></i
+                        ></span>
+                        <span class="text-15 font-[500] text-warning-600 flex"
+                          ><i class="ph-fill ph-star"></i
+                        ></span>
+                      </div>
+                      <span class="text-sm font-[500] text-neutral-600"
+                        >4.7 Star Rating</span
+                      >
+                      <span class="text-sm font-[500] text-gray-500"
+                        >(21,671)</span
+                      >
+                    </div>
+                    <span class="text-sm font-[500] text-gray-500">|</span>
+                    <span class="text-gray-900"
+                      ><span class="text-gray-400">SKU:</span>EB4DRP</span
+                    >
+                  </div>
+                  <span
+                    class="mt-32 pt-32 text-gray-700 border-t border-gray-100 block"
+                  ></span>
+                  <p class="text-gray-700">
+                    Vivamus adipiscing nisl ut dolor dignissim semper. Nulla
+                    luctus malesuada tincidunt. Class aptent taciti sociosqu ad
+                    litora torquent
+                  </p>
+                  <div class="mt-32 flex items-center flex-wrap gap-32">
+                    <div class="flex items-center gap-8">
+                      <h4 class="mb-0">₹2499</h4>
+                      <span class="text-md text-gray-500">₹2999</span>
+                    </div>
+                    <a href="index.html" class="btn btn-main rounded-[50rem]"
+                      >Order on What'sApp</a
+                    >
+                  </div>
+                  <span
+                    class="mt-32 pt-32 text-gray-700 border-t border-gray-100 block"
+                  ></span>
+                  <div
+                    class="flex items-center flex-wrap gap-16 bg-color-one rounded-8 py-16 px-24"
+                  >
+                    <div class="flex items-center gap-16">
+                      <span class="text-main-600 text-sm">Special Offer:</span>
+                    </div>
+                    <div class="countdown" id="countdown11">
+                      <ul class="countdown-list flex items-center flex-wrap">
+                        <li
+                          class="countdown-list__item text-heading gap-4 text-xs font-[500] w-28 h-28 rounded-4 border border-main-600 !p-0 flex items-center justify-center"
+                        >
+                          <span class="days"></span>
+                        </li>
+                        <li
+                          class="countdown-list__item text-heading gap-4 text-xs font-[500] w-28 h-28 rounded-4 border border-main-600 !p-0 flex items-center justify-center"
+                        >
+                          <span class="hours"></span>
+                        </li>
+                        <li
+                          class="countdown-list__item text-heading gap-4 text-xs font-[500] w-28 h-28 rounded-4 border border-main-600 !p-0 flex items-center justify-center"
+                        >
+                          <span class="minutes"></span>
+                        </li>
+                        <li
+                          class="countdown-list__item text-heading gap-4 text-xs font-[500] w-28 h-28 rounded-4 border border-main-600 !p-0 flex items-center justify-center"
+                        >
+                          <span class="seconds"></span>
+                        </li>
+                      </ul>
+                    </div>
+                    <span class="text-gray-900 text-xs"
+                      >Remains untill the end of the offer</span
+                    >
+                  </div>
+                  <div class="mb-24">
+                    <div class="mt-32 flex items-center gap-12 mb-16">
+                      <span
+                        class="w-32 h-32 bg-white flex items-center justify-center rounded-[50%] text-main-600 box-shadow-xl"
+                        ><i class="ph-fill ph-lightning"></i
+                      ></span>
+                      <h6 class="text-md mb-0 font-[700] text-gray-900">
+                        Products are almost sold out
+                      </h6>
+                    </div>
+                    <div
+                      class="progress w-full bg-gray-100 rounded-[50rem] h-8"
+                      role="progressbar"
+                      aria-label="Basic example"
+                      aria-valuenow="32"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    >
+                      <div
+                        class="progress-bar bg-main-two-600 rounded-[50rem] h-full"
+                        style="width: 32%"
+                      ></div>
+                    </div>
+                    <span class="text-sm text-gray-700 mt-8"
+                      >Available only:45</span
+                    >
+                  </div>
+                  <span class="text-gray-900 block mb-8">Quantity:</span>
+                  <div class="flex-between gap-16 flex-wrap">
+                    <div class="flex items-center flex-wrap gap-16">
+                      <div
+                        class="border border-gray-100 rounded-[50rem] py-9 px-16 flex items-center"
+                      >
+                        <button
+                          type="button"
+                          class="quantity__minus p-4 text-gray-700 hover-text-main-600 flex items-center justify-center"
+                        >
+                          <i class="ph ph-minus"></i>
+                        </button>
+                        <input
+                          type="number"
+                          class="quantity__input border-0 text-center w-32"
+                          value="1"
+                        />
+                        <button
+                          type="button"
+                          class="quantity__plus p-4 text-gray-700 hover-text-main-600 flex items-center justify-center"
+                        >
+                          <i class="ph ph-plus"></i>
+                        </button>
+                      </div>
+                      <a
+                        href="index.html"
+                        class="btn btn-main rounded-[50rem] flex items-center inline-flex gap-8 px-48"
+                        ><i class="ph ph-shopping-cart"></i> Add To Cart</a
+                      >
+                    </div>
+                    <div class="flex items-center gap-12">
+                      <a
+                        href="index.html"
+                        class="w-52 h-52 bg-main-50 text-main-600 text-xl hover-bg-main-600 hover-text-white flex items-center justify-center rounded-[50%]"
+                        ><i class="ph ph-heart"></i> </a
+                      ><a
+                        href="index.html"
+                        class="w-52 h-52 bg-main-50 text-main-600 text-xl hover-bg-main-600 hover-text-white flex items-center justify-center rounded-[50%]"
+                        ><i class="ph ph-shuffle"></i> </a
+                      ><a
+                        href="index.html"
+                        class="w-52 h-52 bg-main-50 text-main-600 text-xl hover-bg-main-600 hover-text-white flex items-center justify-center rounded-[50%]"
+                        ><i class="ph ph-share-network"></i
+                      ></a>
+                    </div>
+                  </div>
+                  <span
+                    class="mt-32 pt-32 text-gray-700 border-t border-gray-100 block"
+                  ></span>
+                  <div
+                    class="flex-between gap-16 p-12 border border-main-two-600 border-dashed rounded-8 mb-16"
+                  >
+                    <div class="flex items-center gap-12">
+                      <button
+                        type="button"
+                        class="w-18 h-18 flex items-center justify-center border border-gray-900 text-xs rounded-[50%] hover-bg-gray-100"
+                      >
+                        <i class="ph ph-plus"></i>
+                      </button>
+                      <span class="text-gray-900 font-[500] text-xs"
+                        >Mfr. coupon. $3.00 off 5</span
+                      >
+                    </div>
+                    <a
+                      href="cart.html"
+                      class="text-xs font-[600] text-main-two-600 text-decoration-underline hover-text-main-two-700"
+                      >View Details</a
+                    >
+                  </div>
+                  <ul class="list-inside ms-12">
+                    <li class="text-gray-900 text-sm mb-8">
+                      Buy 1, Get 1 FREE
+                    </li>
+                    <li class="text-gray-900 text-sm mb-0">
+                      Buy 1, Get 1 FREE
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="xl:w-3/12 flex-grow-0 flex-shrink-0 basis-auto">
+            <div
+              class="product-details__sidebar product-details__sidebar-c border border-gray-100 rounded-16 overflow-hidden"
+            >
+              <div class="p-24">
+                <div class="flex-between bg-main-600 rounded-[50rem] p-8">
+                  <div class="flex items-center gap-8">
+                    <span
+                      class="w-44 h-44 bg-white rounded-[50%] flex items-center justify-center text-2xl"
+                      ><i class="ph ph-storefront"></i
+                    ></span>
+                    <span class="text-white">by Marketpro</span>
+                  </div>
+                  <a
+                    href="shop.html"
+                    class="btn btn-white rounded-[50rem] text-[#212529] text-uppercase"
+                    >View Store</a
+                  >
+                </div>
+              </div>
+              <div
+                class="p-24 bg-color-one flex items-start gap-24 border-b border-gray-100"
+              >
+                <span
+                  class="w-44 h-44 bg-white text-main-600 rounded-[50%] flex items-center justify-center text-2xl flex-shrink-0"
+                  ><i class="ph-fill ph-truck"></i
+                ></span>
+                <div class="">
+                  <h6 class="text-sm mb-8">Fast Delivery</h6>
+                  <p class="text-gray-700">
+                    Lightning-fast shipping, guaranteed.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="p-24 bg-color-one flex items-start gap-24 border-b border-gray-100"
+              >
+                <span
+                  class="w-44 h-44 bg-white text-main-600 rounded-[50%] flex items-center justify-center text-2xl flex-shrink-0"
+                  ><i class="ph-fill ph-arrow-u-up-left"></i
+                ></span>
+                <div class="">
+                  <h6 class="text-sm mb-8">Free 90-day returns</h6>
+                  <p class="text-gray-700">Shop risk-free with easy returns.</p>
+                </div>
+              </div>
+              <div
+                class="p-24 bg-color-one flex items-start gap-24 border-b border-gray-100"
+              >
+                <span
+                  class="w-44 h-44 bg-white text-main-600 rounded-[50%] flex items-center justify-center text-2xl flex-shrink-0"
+                  ><i class="ph-fill ph-check-circle"></i
+                ></span>
+                <div class="">
+                  <h6 class="text-sm mb-8">
+                    Pickup available at Shop location
+                  </h6>
+                  <p class="text-gray-700">Usually ready in 24 hours</p>
+                </div>
+              </div>
+              <div
+                class="p-24 bg-color-one flex items-start gap-24 border-b border-gray-100"
+              >
+                <span
+                  class="w-44 h-44 bg-white text-main-600 rounded-[50%] flex items-center justify-center text-2xl flex-shrink-0"
+                  ><i class="ph-fill ph-credit-card"></i
+                ></span>
+                <div class="">
+                  <h6 class="text-sm mb-8">Payment</h6>
+                  <p class="text-gray-700">
+                    Payment upon receipt of goods, Payment by card in the
+                    department, Google Pay, Online card.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="p-24 bg-color-one flex items-start gap-24 border-b border-gray-100"
+              >
+                <span
+                  class="w-44 h-44 bg-white text-main-600 rounded-[50%] flex items-center justify-center text-2xl flex-shrink-0"
+                  ><i class="ph-fill ph-check-circle"></i
+                ></span>
+                <div class="">
+                  <h6 class="text-sm mb-8">Warranty</h6>
+                  <p class="text-gray-700">
+                    The Consumer Protection Act does not provide for the return
+                    of this product of proper quality.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="p-24 bg-color-one flex items-start gap-24 border-b border-gray-100"
+              >
+                <span
+                  class="w-44 h-44 bg-white text-main-600 rounded-[50%] flex items-center justify-center text-2xl flex-shrink-0"
+                  ><i class="ph-fill ph-package"></i
+                ></span>
+                <div class="">
+                  <h6 class="text-sm mb-8">Packaging</h6>
+                  <p class="text-gray-700">
+                    Research & development value proposition graphical user
+                    interface investor.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pt-80">
+          <div class="product-dContent border rounded-24">
+            <div
+              class="product-dContent__header border-b border-gray-100 flex-between flex-wrap gap-16"
+            >
+              <ul
+                class="nav common-tab nav-pills mb-3"
+                id="pills-tab"
+                role="tablist"
+              >
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link bt-tb-btn active"
+                    id="pills-description-tab"
+                    data-target="#pills-description"
+                    data-bs-toggle="pill"
+                    data-bs-target="#pills-description"
+                    type="button"
+                    role="tab"
+                    aria-controls="pills-description"
+                    aria-selected="true"
+                  >
+                    Description
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link bt-tb-btn"
+                    id="pills-reviews-tab"
+                    data-target="#pills-reviews"
+                    data-bs-toggle="pill"
+                    data-bs-target="#pills-reviews"
+                    type="button"
+                    role="tab"
+                    aria-controls="pills-reviews"
+                    aria-selected="false"
+                  >
+                    Reviews
+                  </button>
+                </li>
+              </ul>
+              <a
+                href="#"
+                class="btn bg-color-one rounded-16 flex items-center gap-8 text-main-600 hover-bg-main-600 hover-text-white"
+                ><img
+                  src="images/logo.png"
+                  class="w-36 h-36 m-auto"
+                  alt="Image"
+                />
+                100% Satisfaction Guaranteed</a
+              >
+            </div>
+            <div class="product-dContent__box">
+              <div class="tab-content" id="pills-tabContent">
+                <div
+                  class="tab-pane fade show bt-tab-pane active"
+                  id="pills-description"
+                  role="tabpanel"
+                  aria-labelledby="pills-description-tab"
+                  tabindex="0"
+                >
+                  <div class="mb-40">
+                    <h6 class="mb-24">Product Description</h6>
+                    <p>
+                      Wherever celebrations and good times happen, the LAY'S
+                      brand will be there just as it has been for more than 75
+                      years. With flavors almost as rich as our history, we have
+                      a chip or crisp flavor guaranteed to bring a smile on your
+                      face.
+                    </p>
+                    <p>
+                      Morbi ut sapien vitae odio accumsan gravida. Morbi vitae
+                      erat auctor, eleifend nunc a, lobortis neque. Praesent
+                      aliquam dignissim viverra. Maecenas lacus odio, feugiat eu
+                      nunc sit amet, maximus sagittis dolor. Vivamus nisi
+                      sapien, elementum sit amet eros sit amet, ultricies cursus
+                      ipsum. Sed consequat luctus ligula. Curabitur laoreet
+                      rhoncus blandit. Aenean vel diam ut arcu pharetra
+                      dignissim ut sed leo. Vivamus faucibus, ipsum in
+                      vestibulum vulputate, lorem orci convallis quam, sit amet
+                      consequat nulla felis pharetra lacus. Duis semper erat
+                      mauris, sed egestas purus commodo vel.
+                    </p>
+                    <ul class="list-inside mt-32 ms-16">
+                      <li class="text-gray-400 mb-4">
+                        8.0 oz. bag of LAY'S Classic Potato Chips
+                      </li>
+                      <li class="text-gray-400 mb-4">
+                        Tasty LAY's potato chips are a great snack
+                      </li>
+                      <li class="text-gray-400 mb-4">
+                        Includes three ingredients: potatoes, oil, and salt
+                      </li>
+                      <li class="text-gray-400 mb-4">Gluten free product</li>
+                    </ul>
+                    <ul class="mt-32">
+                      <li class="text-gray-400 mb-4">Made in USA</li>
+                      <li class="text-gray-400 mb-4">Ready To Eat.</li>
+                    </ul>
+                  </div>
+                  <div class="mb-40">
+                    <h6 class="mb-24">Product Specifications</h6>
+                    <ul class="mt-32">
+                      <li class="text-gray-400 mb-14 flex items-center gap-14">
+                        <span
+                          class="w-20 h-20 bg-main-50 text-main-600 text-xs flex items-center justify-center rounded-[50%]"
+                          ><i class="ph ph-check"></i> </span
+                        ><span class="text-heading font-[500]"
+                          >Product Type:
+                          <span class="text-gray-500">Chips & Dips</span></span
+                        >
+                      </li>
+                      <li class="text-gray-400 mb-14 flex items-center gap-14">
+                        <span
+                          class="w-20 h-20 bg-main-50 text-main-600 text-xs flex items-center justify-center rounded-[50%]"
+                          ><i class="ph ph-check"></i> </span
+                        ><span class="text-heading font-[500]"
+                          >Product Name:
+                          <span class="text-gray-500"
+                            >Potato Chips Classic</span
+                          ></span
+                        >
+                      </li>
+                      <li class="text-gray-400 mb-14 flex items-center gap-14">
+                        <span
+                          class="w-20 h-20 bg-main-50 text-main-600 text-xs flex items-center justify-center rounded-[50%]"
+                          ><i class="ph ph-check"></i> </span
+                        ><span class="text-heading font-[500]"
+                          >Brand: <span class="text-gray-500">Lay's</span></span
+                        >
+                      </li>
+                      <li class="text-gray-400 mb-14 flex items-center gap-14">
+                        <span
+                          class="w-20 h-20 bg-main-50 text-main-600 text-xs flex items-center justify-center rounded-[50%]"
+                          ><i class="ph ph-check"></i> </span
+                        ><span class="text-heading font-[500]"
+                          >FSA Eligible:
+                          <span class="text-gray-500">No</span></span
+                        >
+                      </li>
+                      <li class="text-gray-400 mb-14 flex items-center gap-14">
+                        <span
+                          class="w-20 h-20 bg-main-50 text-main-600 text-xs flex items-center justify-center rounded-[50%]"
+                          ><i class="ph ph-check"></i> </span
+                        ><span class="text-heading font-[500]"
+                          >Size/Count:
+                          <span class="text-gray-500">8.0oz</span></span
+                        >
+                      </li>
+                      <li class="text-gray-400 mb-14 flex items-center gap-14">
+                        <span
+                          class="w-20 h-20 bg-main-50 text-main-600 text-xs flex items-center justify-center rounded-[50%]"
+                          ><i class="ph ph-check"></i> </span
+                        ><span class="text-heading font-[500]"
+                          >Item Code:
+                          <span class="text-gray-500">331539</span></span
+                        >
+                      </li>
+                      <li class="text-gray-400 mb-14 flex items-center gap-14">
+                        <span
+                          class="w-20 h-20 bg-main-50 text-main-600 text-xs flex items-center justify-center rounded-[50%]"
+                          ><i class="ph ph-check"></i> </span
+                        ><span class="text-heading font-[500]"
+                          >Ingredients:
+                          <span class="text-gray-500"
+                            >Potatoes, Vegetable Oil, and Salt.</span
+                          ></span
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="mb-40">
+                    <h6 class="mb-24">Nutrition Facts</h6>
+                    <ul class="mt-32">
+                      <li class="text-gray-400 mb-14 flex items-center gap-14">
+                        <span
+                          class="w-20 h-20 bg-main-50 text-main-600 text-xs flex items-center justify-center rounded-[50%]"
+                          ><i class="ph ph-check"></i> </span
+                        ><span class="text-heading font-[500]"
+                          >Total Fat 10g 13%</span
+                        >
+                      </li>
+                      <li class="text-gray-400 mb-14 flex items-center gap-14">
+                        <span
+                          class="w-20 h-20 bg-main-50 text-main-600 text-xs flex items-center justify-center rounded-[50%]"
+                          ><i class="ph ph-check"></i> </span
+                        ><span class="text-heading font-[500]"
+                          >Saturated Fat 1.5g 7%</span
+                        >
+                      </li>
+                      <li class="text-gray-400 mb-14 flex items-center gap-14">
+                        <span
+                          class="w-20 h-20 bg-main-50 text-main-600 text-xs flex items-center justify-center rounded-[50%]"
+                          ><i class="ph ph-check"></i> </span
+                        ><span class="text-heading font-[500]"
+                          >Cholesterol 0mg 0%</span
+                        >
+                      </li>
+                      <li class="text-gray-400 mb-14 flex items-center gap-14">
+                        <span
+                          class="w-20 h-20 bg-main-50 text-main-600 text-xs flex items-center justify-center rounded-[50%]"
+                          ><i class="ph ph-check"></i> </span
+                        ><span class="text-heading font-[500]"
+                          >Sodium 170mg 7%</span
+                        >
+                      </li>
+                      <li class="text-gray-400 mb-14 flex items-center gap-14">
+                        <span
+                          class="w-20 h-20 bg-main-50 text-main-600 text-xs flex items-center justify-center rounded-[50%]"
+                          ><i class="ph ph-check"></i> </span
+                        ><span class="text-heading font-[500]"
+                          >Potassium 350mg 6%</span
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="mb-0">
+                    <h6 class="mb-24">More Details</h6>
+                    <ul class="mt-32">
+                      <li class="text-gray-400 mb-14 flex items-center gap-14">
+                        <span
+                          class="w-20 h-20 bg-main-50 text-main-600 text-xs flex items-center justify-center rounded-[50%]"
+                          ><i class="ph ph-check"></i> </span
+                        ><span class="text-gray-500"
+                          >Lunarlon midsole delivers ultra-plush
+                          responsiveness</span
+                        >
+                      </li>
+                      <li class="text-gray-400 mb-14 flex items-center gap-14">
+                        <span
+                          class="w-20 h-20 bg-main-50 text-main-600 text-xs flex items-center justify-center rounded-[50%]"
+                          ><i class="ph ph-check"></i> </span
+                        ><span class="text-gray-500"
+                          >Encapsulated Air-Sole heel unit for lightweight
+                          cushioning</span
+                        >
+                      </li>
+                      <li class="text-gray-400 mb-14 flex items-center gap-14">
+                        <span
+                          class="w-20 h-20 bg-main-50 text-main-600 text-xs flex items-center justify-center rounded-[50%]"
+                          ><i class="ph ph-check"></i> </span
+                        ><span class="text-gray-500"
+                          >Colour Shown: Ale Brown/Black/Goldtone/Ale
+                          Brown</span
+                        >
+                      </li>
+                      <li class="text-gray-400 mb-14 flex items-center gap-14">
+                        <span
+                          class="w-20 h-20 bg-main-50 text-main-600 text-xs flex items-center justify-center rounded-[50%]"
+                          ><i class="ph ph-check"></i> </span
+                        ><span class="text-gray-500">Style: 805899-202</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div
+                  class="tab-pane fade bt-tab-pane"
+                  id="pills-reviews"
+                  role="tabpanel"
+                  aria-labelledby="pills-reviews-tab"
+                  tabindex="0"
+                >
+                  <div class="row g-4">
+                    <div class="xl:w-6/12 flex-grow-0 flex-shrink-0 basis-auto">
+                      <h6 class="mb-24">Product Description</h6>
+                      <div
+                        class="flex items-start gap-24 pb-44 border-b border-gray-100 mb-44"
+                      >
+                        <img
+                          src="images/adarsh.jpg"
+                          alt="Image"
+                          class="w-52 h-52 object-fit-cover rounded-[50%] flex-shrink-0"
+                        />
+                        <div class="flex-grow">
+                          <div class="flex-between items-start gap-8">
+                            <div class="">
+                              <h6 class="mb-12 text-md">Adarsh Maurya</h6>
+                              <div class="flex items-center gap-8">
+                                <span
+                                  class="text-15 font-[500] text-warning-600 flex"
+                                  ><i class="ph-fill ph-star"></i
+                                ></span>
+                                <span
+                                  class="text-15 font-[500] text-warning-600 flex"
+                                  ><i class="ph-fill ph-star"></i
+                                ></span>
+                                <span
+                                  class="text-15 font-[500] text-warning-600 flex"
+                                  ><i class="ph-fill ph-star"></i
+                                ></span>
+                                <span
+                                  class="text-15 font-[500] text-warning-600 flex"
+                                  ><i class="ph-fill ph-star"></i
+                                ></span>
+                                <span
+                                  class="text-15 font-[500] text-warning-600 flex"
+                                  ><i class="ph-fill ph-star"></i
+                                ></span>
+                              </div>
+                            </div>
+                            <span class="text-gray-800 text-xs"
+                              >3 Days ago</span
+                            >
+                          </div>
+                          <h6 class="mb-14 text-md mt-24">Greate Product</h6>
+                          <p class="text-gray-700">
+                            There are many variations of passages of Lorem Ipsum
+                            available, but the majority have suffered alteration
+                            in some form, by injected humour
+                          </p>
+                          <div class="flex items-center gap-20 mt-44">
+                            <button
+                              class="flex items-center gap-12 text-gray-700 hover-text-main-600"
+                            >
+                              <i class="ph-bold ph-thumbs-up"></i> Like
+                            </button>
+                            <a
+                              href="#comment-form"
+                              class="flex items-center gap-12 text-gray-700 hover-text-main-600"
+                              ><i class="ph-bold ph-arrow-bend-up-left"></i>
+                              Replay</a
+                            >
+                          </div>
+                        </div>
+                      </div>
+                      <div class="flex items-start gap-24">
+                        <img
+                          src="images/adarsh.jpg"
+                          alt="Image"
+                          class="w-52 h-52 object-fit-cover rounded-[50%] flex-shrink-0"
+                        />
+                        <div class="flex-grow">
+                          <div class="flex-between items-start gap-8">
+                            <div class="">
+                              <h6 class="mb-12 text-md">Adarsh Maurya</h6>
+                              <div class="flex items-center gap-8">
+                                <span
+                                  class="text-15 font-[500] text-warning-600 flex"
+                                  ><i class="ph-fill ph-star"></i
+                                ></span>
+                                <span
+                                  class="text-15 font-[500] text-warning-600 flex"
+                                  ><i class="ph-fill ph-star"></i
+                                ></span>
+                                <span
+                                  class="text-15 font-[500] text-warning-600 flex"
+                                  ><i class="ph-fill ph-star"></i
+                                ></span>
+                                <span
+                                  class="text-15 font-[500] text-warning-600 flex"
+                                  ><i class="ph-fill ph-star"></i
+                                ></span>
+                                <span
+                                  class="text-15 font-[500] text-warning-600 flex"
+                                  ><i class="ph-fill ph-star"></i
+                                ></span>
+                              </div>
+                            </div>
+                            <span class="text-gray-800 text-xs"
+                              >3 Days ago</span
+                            >
+                          </div>
+                          <h6 class="mb-14 text-md mt-24">Greate Product</h6>
+                          <p class="text-gray-700">
+                            There are many variations of passages of Lorem Ipsum
+                            available, but the majority have suffered alteration
+                            in some form, by injected humour
+                          </p>
+                          <div class="flex items-center gap-20 mt-44">
+                            <button
+                              class="flex items-center gap-12 text-gray-700 hover-text-main-600"
+                            >
+                              <i class="ph-bold ph-thumbs-up"></i> Like
+                            </button>
+                            <a
+                              href="#comment-form"
+                              class="flex items-center gap-12 text-gray-700 hover-text-main-600"
+                              ><i class="ph-bold ph-arrow-bend-up-left"></i>
+                              Replay</a
+                            >
+                          </div>
+                        </div>
+                      </div>
+                      <div class="mt-56">
+                        <div class="">
+                          <h6 class="mb-24">Write a Review</h6>
+                          <span class="text-heading mb-8"
+                            >What is it like to Product?</span
+                          >
+                          <div class="flex items-center gap-8">
+                            <span
+                              class="text-15 font-[500] text-warning-600 flex"
+                              ><i class="ph-fill ph-star"></i
+                            ></span>
+                            <span
+                              class="text-15 font-[500] text-warning-600 flex"
+                              ><i class="ph-fill ph-star"></i
+                            ></span>
+                            <span
+                              class="text-15 font-[500] text-warning-600 flex"
+                              ><i class="ph-fill ph-star"></i
+                            ></span>
+                            <span
+                              class="text-15 font-[500] text-warning-600 flex"
+                              ><i class="ph-fill ph-star"></i
+                            ></span>
+                            <span
+                              class="text-15 font-[500] text-warning-600 flex"
+                              ><i class="ph-fill ph-star"></i
+                            ></span>
+                          </div>
+                        </div>
+                        <div class="mt-32">
+                          <form action="#">
+                            <div class="mb-32">
+                              <label for="title" class="text-neutral-600 mb-8"
+                                >Review Title</label
+                              >
+                              <input
+                                class="common-input rounded-8"
+                                id="title"
+                                placeholder="Great Products"
+                              />
+                            </div>
+                            <div class="mb-32">
+                              <label for="desc" class="text-neutral-600 mb-8"
+                                >Review Content</label
+                              >
+                              <textarea
+                                class="common-input rounded-8"
+                                id="desc"
+                              >
+It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</textarea
+                              >
+                            </div>
+                            <button
+                              type="submit"
+                              class="btn btn-main rounded-[50rem] mt-48"
+                            >
+                              Submit Review
+                            </button>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="xl:w-6/12 flex-grow-0 flex-shrink-0 basis-auto">
+                      <div class="ms-xxl-5">
+                        <h6 class="mb-24">Customers Feedback</h6>
+                        <div class="flex flex-wrap gap-44">
+                          <div
+                            class="border border-gray-100 rounded-8 px-40 py-52 flex items-center justify-center flex-col flex-shrink-0 text-center"
+                          >
+                            <h2 class="mb-6 text-main-600">4.8</h2>
+                            <div class="flex items-center justify-center gap-8">
+                              <span
+                                class="text-15 font-[500] text-warning-600 flex"
+                                ><i class="ph-fill ph-star"></i
+                              ></span>
+                              <span
+                                class="text-15 font-[500] text-warning-600 flex"
+                                ><i class="ph-fill ph-star"></i
+                              ></span>
+                              <span
+                                class="text-15 font-[500] text-warning-600 flex"
+                                ><i class="ph-fill ph-star"></i
+                              ></span>
+                              <span
+                                class="text-15 font-[500] text-warning-600 flex"
+                                ><i class="ph-fill ph-star"></i
+                              ></span>
+                              <span
+                                class="text-15 font-[500] text-warning-600 flex"
+                                ><i class="ph-fill ph-star"></i
+                              ></span>
+                            </div>
+                            <span class="mt-16 text-gray-500"
+                              >Average Product Rating</span
+                            >
+                          </div>
+                          <div
+                            class="border border-gray-100 rounded-8 px-24 py-40 flex-grow"
+                          >
+                            <div class="flex items-center gap-8 mb-20">
+                              <span class="text-gray-900 flex-shrink-0">5</span>
+                              <div
+                                class="progress w-full bg-gray-100 rounded-[50rem] h-8"
+                                role="progressbar"
+                                aria-label="Basic example"
+                                aria-valuenow="70"
+                                aria-valuemin="0"
+                                aria-valuemax="100"
+                              >
+                                <div
+                                  class="progress-bar bg-main-600 rounded-[50rem]"
+                                  style="width: 70%"
+                                ></div>
+                              </div>
+                              <div class="flex items-center gap-4">
+                                <span
+                                  class="text-xs font-[500] text-warning-600 flex"
+                                  ><i class="ph-fill ph-star"></i
+                                ></span>
+                                <span
+                                  class="text-xs font-[500] text-warning-600 flex"
+                                  ><i class="ph-fill ph-star"></i
+                                ></span>
+                                <span
+                                  class="text-xs font-[500] text-warning-600 flex"
+                                  ><i class="ph-fill ph-star"></i
+                                ></span>
+                                <span
+                                  class="text-xs font-[500] text-warning-600 flex"
+                                  ><i class="ph-fill ph-star"></i
+                                ></span>
+                                <span
+                                  class="text-xs font-[500] text-warning-600 flex"
+                                  ><i class="ph-fill ph-star"></i
+                                ></span>
+                              </div>
+                              <span class="text-gray-900 flex-shrink-0"
+                                >124</span
+                              >
+                            </div>
+                            <div class="flex items-center gap-8 mb-20">
+                              <span class="text-gray-900 flex-shrink-0">4</span>
+                              <div
+                                class="progress w-full bg-gray-100 rounded-[50rem] h-8"
+                                role="progressbar"
+                                aria-label="Basic example"
+                                aria-valuenow="50"
+                                aria-valuemin="0"
+                                aria-valuemax="100"
+                              >
+                                <div
+                                  class="progress-bar bg-main-600 rounded-[50rem]"
+                                  style="width: 50%"
+                                ></div>
+                              </div>
+                              <div class="flex items-center gap-4">
+                                <span
+                                  class="text-xs font-[500] text-warning-600 flex"
+                                  ><i class="ph-fill ph-star"></i
+                                ></span>
+                                <span
+                                  class="text-xs font-[500] text-warning-600 flex"
+                                  ><i class="ph-fill ph-star"></i
+                                ></span>
+                                <span
+                                  class="text-xs font-[500] text-warning-600 flex"
+                                  ><i class="ph-fill ph-star"></i
+                                ></span>
+                                <span
+                                  class="text-xs font-[500] text-warning-600 flex"
+                                  ><i class="ph-fill ph-star"></i
+                                ></span>
+                                <span
+                                  class="text-xs font-[500] text-warning-600 flex"
+                                  ><i class="ph-fill ph-star"></i
+                                ></span>
+                              </div>
+                              <span class="text-gray-900 flex-shrink-0"
+                                >52</span
+                              >
+                            </div>
+                            <div class="flex items-center gap-8 mb-20">
+                              <span class="text-gray-900 flex-shrink-0">3</span>
+                              <div
+                                class="progress w-full bg-gray-100 rounded-[50rem] h-8"
+                                role="progressbar"
+                                aria-label="Basic example"
+                                aria-valuenow="35"
+                                aria-valuemin="0"
+                                aria-valuemax="100"
+                              >
+                                <div
+                                  class="progress-bar bg-main-600 rounded-[50rem]"
+                                  style="width: 35%"
+                                ></div>
+                              </div>
+                              <div class="flex items-center gap-4">
+                                <span
+                                  class="text-xs font-[500] text-warning-600 flex"
+                                  ><i class="ph-fill ph-star"></i
+                                ></span>
+                                <span
+                                  class="text-xs font-[500] text-warning-600 flex"
+                                  ><i class="ph-fill ph-star"></i
+                                ></span>
+                                <span
+                                  class="text-xs font-[500] text-warning-600 flex"
+                                  ><i class="ph-fill ph-star"></i
+                                ></span>
+                                <span
+                                  class="text-xs font-[500] text-warning-600 flex"
+                                  ><i class="ph-fill ph-star"></i
+                                ></span>
+                                <span
+                                  class="text-xs font-[500] text-warning-600 flex"
+                                  ><i class="ph-fill ph-star"></i
+                                ></span>
+                              </div>
+                              <span class="text-gray-900 flex-shrink-0"
+                                >12</span
+                              >
+                            </div>
+                            <div class="flex items-center gap-8 mb-20">
+                              <span class="text-gray-900 flex-shrink-0">2</span>
+                              <div
+                                class="progress w-full bg-gray-100 rounded-[50rem] h-8"
+                                role="progressbar"
+                                aria-label="Basic example"
+                                aria-valuenow="20"
+                                aria-valuemin="0"
+                                aria-valuemax="100"
+                              >
+                                <div
+                                  class="progress-bar bg-main-600 rounded-[50rem]"
+                                  style="width: 20%"
+                                ></div>
+                              </div>
+                              <div class="flex items-center gap-4">
+                                <span
+                                  class="text-xs font-[500] text-warning-600 flex"
+                                  ><i class="ph-fill ph-star"></i
+                                ></span>
+                                <span
+                                  class="text-xs font-[500] text-warning-600 flex"
+                                  ><i class="ph-fill ph-star"></i
+                                ></span>
+                                <span
+                                  class="text-xs font-[500] text-warning-600 flex"
+                                  ><i class="ph-fill ph-star"></i
+                                ></span>
+                                <span
+                                  class="text-xs font-[500] text-warning-600 flex"
+                                  ><i class="ph-fill ph-star"></i
+                                ></span>
+                                <span
+                                  class="text-xs font-[500] text-warning-600 flex"
+                                  ><i class="ph-fill ph-star"></i
+                                ></span>
+                              </div>
+                              <span class="text-gray-900 flex-shrink-0">5</span>
+                            </div>
+                            <div class="flex items-center gap-8 mb-0">
+                              <span class="text-gray-900 flex-shrink-0">1</span>
+                              <div
+                                class="progress w-full bg-gray-100 rounded-[50rem] h-8"
+                                role="progressbar"
+                                aria-label="Basic example"
+                                aria-valuenow="5"
+                                aria-valuemin="0"
+                                aria-valuemax="100"
+                              >
+                                <div
+                                  class="progress-bar bg-main-600 rounded-[50rem]"
+                                  style="width: 5%"
+                                ></div>
+                              </div>
+                              <div class="flex items-center gap-4">
+                                <span
+                                  class="text-xs font-[500] text-warning-600 flex"
+                                  ><i class="ph-fill ph-star"></i
+                                ></span>
+                                <span
+                                  class="text-xs font-[500] text-warning-600 flex"
+                                  ><i class="ph-fill ph-star"></i
+                                ></span>
+                                <span
+                                  class="text-xs font-[500] text-warning-600 flex"
+                                  ><i class="ph-fill ph-star"></i
+                                ></span>
+                                <span
+                                  class="text-xs font-[500] text-warning-600 flex"
+                                  ><i class="ph-fill ph-star"></i
+                                ></span>
+                                <span
+                                  class="text-xs font-[500] text-warning-600 flex"
+                                  ><i class="ph-fill ph-star"></i
+                                ></span>
+                              </div>
+                              <span class="text-gray-900 flex-shrink-0">2</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- You Might Also Like -->
+    <section class="new-arrival pb-80">
+      <div class="container container-lg">
+        <div class="section-heading">
+          <div class="flex-between flex-wrap gap-8">
+            <h5 class="mb-0">You Might Also Like</h5>
+            <div class="flex items-center gap-16">
+              <a
+                href="shop.html"
+                class="text-sm font-[500] text-gray-700 hover-text-main-600 hover-text-decoration-underline"
+                >All Products</a
+              >
+              <div class="flex items-center gap-8">
+                <button
+                  type="button"
+                  id="new-arrival-prev"
+                  class="slick-prev slick-arrow flex items-center justify-center rounded-[50%] border border-gray-100 hover-border-main-600 text-xl hover-bg-main-600 hover-text-white transition-1"
+                >
+                  <i class="ph ph-caret-left"></i>
+                </button>
+                <button
+                  type="button"
+                  id="new-arrival-next"
+                  class="slick-next slick-arrow flex items-center justify-center rounded-[50%] border border-gray-100 hover-border-main-600 text-xl hover-bg-main-600 hover-text-white transition-1"
+                >
+                  <i class="ph ph-caret-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="new-arrival__slider arrow-style-two">
+          <div>
+            <div
+              class="product-card h-full p-8 border border-gray-100 hover-border-main-600 rounded-16 relative transition-2"
+            >
+              <a
+                href="#"
+                class="product-card__thumb flex items-center justify-center"
+                ><img src="images/product-img7.png" alt="Image"
+              /></a>
+              <div class="product-card__content p-sm-2 w-full">
+                <h6 class="title text-lg font-[600] mt-12 mb-8">
+                  <a href="#" class="link text-line-2"
+                    >Supreme Lifeline Pipe SDR 11 CPVC 15 mm 11 1Mtr</a
+                  >
+                </h6>
+                <div class="flex items-center gap-4">
+                  <span class="text-main-600 text-md flex"
+                    ><i class="ph-fill ph-storefront"></i
+                  ></span>
+                  <span class="text-gray-500 text-xs">By Rishabh Plumbing</span>
+                </div>
+                <div class="product-card__content mt-12">
+                  <div class="product-card__price mb-8">
+                    <span class="text-heading text-md font-[600]"
+                      >₹249
+                      <span class="text-gray-500 font-normal">/Qty</span> </span
+                    ><span
+                      class="text-gray-400 text-md font-[600] text-decoration-line-through"
+                      >₹300</span
+                    >
+                  </div>
+                  <div class="flex items-center gap-6">
+                    <span class="text-xs font-[700] text-gray-600">4.8</span>
+                    <span class="text-15 font-[700] text-warning-600 flex"
+                      ><i class="ph-fill ph-star"></i
+                    ></span>
+                    <span class="text-xs font-[700] text-gray-600">(17k)</span>
+                  </div>
+                  <a
+                    href="#"
+                    class="product-card__cart btn bg-success-200 hover-bg-main-600 text-main-600 hover-text-white py-11 px-24 rounded-[50rem] flex items-center gap-8 mt-24 w-full justify-center"
+                    >Add To Cart <i class="ph ph-shopping-cart"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div
+              class="product-card h-full p-8 border border-gray-100 hover-border-main-600 rounded-16 relative transition-2"
+            >
+              <span
+                class="product-card__badge bg-danger-600 px-8 py-4 text-sm text-white"
+                >Sale 13% </span
+              ><a
+                href="#"
+                class="product-card__thumb flex items-center justify-center"
+                ><img src="images/product-img8.png" alt="Image"
+              /></a>
+              <div class="product-card__content p-sm-2 w-full">
+                <h6 class="title text-lg font-[600] mt-12 mb-8">
+                  <a href="#" class="link text-line-2"
+                    >White and brown combinatauion tiles for wall</a
+                  >
+                </h6>
+                <div class="flex items-center gap-4">
+                  <span class="text-main-600 text-md flex"
+                    ><i class="ph-fill ph-storefront"></i
+                  ></span>
+                  <span class="text-gray-500 text-xs">By Rishabh Tiles</span>
+                </div>
+                <div class="product-card__content mt-12">
+                  <div class="product-card__price mb-8">
+                    <span class="text-heading text-md font-[600]"
+                      >₹350
+                      <span class="text-gray-500 font-normal">/Qty</span> </span
+                    ><span
+                      class="text-gray-400 text-md font-[600] text-decoration-line-through"
+                      >₹400</span
+                    >
+                  </div>
+                  <div class="flex items-center gap-6">
+                    <span class="text-xs font-[700] text-gray-600">4.8</span>
+                    <span class="text-15 font-[700] text-warning-600 flex"
+                      ><i class="ph-fill ph-star"></i
+                    ></span>
+                    <span class="text-xs font-[700] text-gray-600">(17k)</span>
+                  </div>
+                  <a
+                    href="#"
+                    class="product-card__cart btn bg-success-200 hover-bg-main-600 text-main-600 hover-text-white py-11 px-24 rounded-[50rem] flex items-center gap-8 mt-24 w-full justify-center"
+                    >Add To Cart <i class="ph ph-shopping-cart"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div
+              class="product-card h-full p-8 border border-gray-100 hover-border-main-600 rounded-16 relative transition-2"
+            >
+              <span
+                class="product-card__badge bg-danger-600 px-8 py-4 text-sm text-white"
+                >Sale 25% </span
+              ><a
+                href="#"
+                class="product-card__thumb flex items-center justify-center"
+                ><img src="images/product-img9.png" alt="Image"
+              /></a>
+              <div class="product-card__content p-sm-2 w-full">
+                <h6 class="title text-lg font-[600] mt-12 mb-8">
+                  <a href="#" class="link text-line-2"
+                    >Overview CPVC is a high-temperature plastic pressure piping
+                    system introduced for potable (Pack Of 5)</a
+                  >
+                </h6>
+                <div class="flex items-center gap-4">
+                  <span class="text-main-600 text-md flex"
+                    ><i class="ph-fill ph-storefront"></i
+                  ></span>
+                  <span class="text-gray-500 text-xs">By Rishabh Plumbing</span>
+                </div>
+                <div class="product-card__content mt-12">
+                  <div class="product-card__price mb-8">
+                    <span class="text-heading text-md font-[600]"
+                      >₹1199
+                      <span class="text-gray-500 font-normal">/Qty</span> </span
+                    ><span
+                      class="text-gray-400 text-md font-[600] text-decoration-line-through"
+                      >₹1600</span
+                    >
+                  </div>
+                  <div class="flex items-center gap-6">
+                    <span class="text-xs font-[700] text-gray-600">4.8</span>
+                    <span class="text-15 font-[700] text-warning-600 flex"
+                      ><i class="ph-fill ph-star"></i
+                    ></span>
+                    <span class="text-xs font-[700] text-gray-600">(17k)</span>
+                  </div>
+                  <a
+                    href="#"
+                    class="product-card__cart btn bg-success-200 hover-bg-main-600 text-main-600 hover-text-white py-11 px-24 rounded-[50rem] flex items-center gap-8 mt-24 w-full justify-center"
+                    >Add To Cart <i class="ph ph-shopping-cart"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div
+              class="product-card h-full p-8 border border-gray-100 hover-border-main-600 rounded-16 relative transition-2"
+            >
+              <span
+                class="product-card__badge bg-info-600 px-8 py-4 text-sm text-white"
+                >Best Sale </span
+              ><a
+                href="#"
+                class="product-card__thumb flex items-center justify-center"
+                ><img src="images/product-img10.png" alt="Image"
+              /></a>
+              <div class="product-card__content p-sm-2 w-full">
+                <h6 class="title text-lg font-[600] mt-12 mb-8">
+                  <a href="#" class="link text-line-2">Tiles 300*4500</a>
+                </h6>
+                <div class="flex items-center gap-4">
+                  <span class="text-main-600 text-md flex"
+                    ><i class="ph-fill ph-storefront"></i
+                  ></span>
+                  <span class="text-gray-500 text-xs">By Rishabh Tiles</span>
+                </div>
+                <div class="product-card__content mt-12">
+                  <div class="product-card__price mb-8">
+                    <span class="text-heading text-md font-[600]"
+                      >₹350
+                      <span class="text-gray-500 font-normal">/Qty</span> </span
+                    ><span
+                      class="text-gray-400 text-md font-[600] text-decoration-line-through"
+                      >₹400</span
+                    >
+                  </div>
+                  <div class="flex items-center gap-6">
+                    <span class="text-xs font-[700] text-gray-600">4.8</span>
+                    <span class="text-15 font-[700] text-warning-600 flex"
+                      ><i class="ph-fill ph-star"></i
+                    ></span>
+                    <span class="text-xs font-[700] text-gray-600">(17k)</span>
+                  </div>
+                  <a
+                    href="#"
+                    class="product-card__cart btn bg-success-200 hover-bg-main-600 text-main-600 hover-text-white py-11 px-24 rounded-[50rem] flex items-center gap-8 mt-24 w-full justify-center"
+                    >Add To Cart <i class="ph ph-shopping-cart"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div
+              class="product-card h-full p-8 border border-gray-100 hover-border-main-600 rounded-16 relative transition-2"
+            >
+              <a
+                href="#"
+                class="product-card__thumb flex items-center justify-center"
+                ><img src="images/product-img11.png" alt="Image"
+              /></a>
+              <div class="product-card__content p-sm-2 w-full">
+                <h6 class="title text-lg font-[600] mt-12 mb-8">
+                  <a href="#" class="link text-line-2"
+                    >Asian Paints Apcolite premium gloss enamel paint
+                    white-1000ml white Enamel Wall Paint (1000 ml)</a
+                  >
+                </h6>
+                <div class="flex items-center gap-4">
+                  <span class="text-main-600 text-md flex"
+                    ><i class="ph-fill ph-storefront"></i
+                  ></span>
+                  <span class="text-gray-500 text-xs">By Asianpaint</span>
+                </div>
+                <div class="product-card__content mt-12">
+                  <div class="product-card__price mb-8">
+                    <span class="text-heading text-md font-[600]"
+                      >₹355
+                      <span class="text-gray-500 font-normal">/Qty</span> </span
+                    ><span
+                      class="text-gray-400 text-md font-[600] text-decoration-line-through"
+                      >₹444</span
+                    >
+                  </div>
+                  <div class="flex items-center gap-6">
+                    <span class="text-xs font-[700] text-gray-600">4.8</span>
+                    <span class="text-15 font-[700] text-warning-600 flex"
+                      ><i class="ph-fill ph-star"></i
+                    ></span>
+                    <span class="text-xs font-[700] text-gray-600">(17k)</span>
+                  </div>
+                  <a
+                    href="#"
+                    class="product-card__cart btn bg-success-200 hover-bg-main-600 text-main-600 hover-text-white py-11 px-24 rounded-[50rem] flex items-center gap-8 mt-24 w-full justify-center"
+                    >Add To Cart <i class="ph ph-shopping-cart"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div
+              class="product-card h-full p-8 border border-gray-100 hover-border-main-600 rounded-16 relative transition-2"
+            >
+              <span
+                class="product-card__badge bg-danger-600 px-8 py-4 text-sm text-white"
+                >Sale 20% </span
+              ><a
+                href="#"
+                class="product-card__thumb flex items-center justify-center"
+                ><img src="images/product-img12.png" alt="Image"
+              /></a>
+              <div class="product-card__content p-sm-2 w-full">
+                <h6 class="title text-lg font-[600] mt-12 mb-8">
+                  <a href="#" class="link text-line-2"
+                    >PVC Flexible 20 mm Pipe Hose Cover White Corrugated Wire
+                    Tubing Tube Conduit Pipe 30 Meters Wire Hose Cover Pipe</a
+                  >
+                </h6>
+                <div class="flex items-center gap-4">
+                  <span class="text-main-600 text-md flex"
+                    ><i class="ph-fill ph-storefront"></i
+                  ></span>
+                  <span class="text-gray-500 text-xs"
+                    >By Rishabh Electronics</span
+                  >
+                </div>
+                <div class="product-card__content mt-12">
+                  <div class="product-card__price mb-8">
+                    <span class="text-heading text-md font-[600]"
+                      >₹40
+                      <span class="text-gray-500 font-normal">/Qty</span> </span
+                    ><span
+                      class="text-gray-400 text-md font-[600] text-decoration-line-through"
+                      >₹50</span
+                    >
+                  </div>
+                  <div class="flex items-center gap-6">
+                    <span class="text-xs font-[700] text-gray-600">4.8</span>
+                    <span class="text-15 font-[700] text-warning-600 flex"
+                      ><i class="ph-fill ph-star"></i
+                    ></span>
+                    <span class="text-xs font-[700] text-gray-600">(17k)</span>
+                  </div>
+                  <a
+                    href="#"
+                    class="product-card__cart btn bg-success-200 hover-bg-main-600 text-main-600 hover-text-white py-11 px-24 rounded-[50rem] flex items-center gap-8 mt-24 w-full justify-center"
+                    >Add To Cart <i class="ph ph-shopping-cart"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div
+              class="product-card h-full p-8 border border-gray-100 hover-border-main-600 rounded-16 relative transition-2"
+            >
+              <a
+                href="#"
+                class="product-card__thumb flex items-center justify-center"
+                ><img src="images/product-img13.png" alt="Image"
+              /></a>
+              <div class="product-card__content p-sm-2 w-full">
+                <h6 class="title text-lg font-[600] mt-12 mb-8">
+                  <a href="#" class="link text-line-2"
+                    >Ceramic Floor Mounted European Water Closet/Western Toilet
+                    Commode/WC/EWC S Trap 47cm x 37cm x 40cm - White</a
+                  >
+                </h6>
+                <div class="flex items-center gap-4">
+                  <span class="text-main-600 text-md flex"
+                    ><i class="ph-fill ph-storefront"></i
+                  ></span>
+                  <span class="text-gray-500 text-xs">By Rishabh Refresh</span>
+                </div>
+                <div class="product-card__content mt-12">
+                  <div class="product-card__price mb-8">
+                    <span class="text-heading text-md font-[600]"
+                      >₹1200
+                      <span class="text-gray-500 font-normal">/Qty</span> </span
+                    ><span
+                      class="text-gray-400 text-md font-[600] text-decoration-line-through"
+                      >₹1500</span
+                    >
+                  </div>
+                  <div class="flex items-center gap-6">
+                    <span class="text-xs font-[700] text-gray-600">4.8</span>
+                    <span class="text-15 font-[700] text-warning-600 flex"
+                      ><i class="ph-fill ph-star"></i
+                    ></span>
+                    <span class="text-xs font-[700] text-gray-600">(17k)</span>
+                  </div>
+                  <a
+                    href="#"
+                    class="product-card__cart btn bg-success-200 hover-bg-main-600 text-main-600 hover-text-white py-11 px-24 rounded-[50rem] flex items-center gap-8 mt-24 w-full justify-center"
+                    >Add To Cart <i class="ph ph-shopping-cart"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Shipping -->
+    <section class="shipping mb-24" id="shipping">
+      <div class="container container-lg">
+        <div class="row g-4">
+          <div
+            class="custom-2xl:w-3/12 flex-grow-0 flex-shrink-0 basis-auto md:w-6/12"
+            data-aos="zoom-in"
+            data-aos-duration="400"
+          >
+            <div
+              class="shipping-item flex items-center gap-16 rounded-16 bg-main-100 transition-2"
+            >
+              <span
+                class="w-56 h-56 flex items-center justify-center rounded-[50%] bg-main-600 text-white text-32 flex-shrink-0"
+                ><i class="ph-fill ph-car-profile"></i
+              ></span>
+              <div class="">
+                <h6 class="mb-0">Free Shipping</h6>
+                <span class="text-sm text-heading"
+                  >Free shipping all over the US</span
+                >
+              </div>
+            </div>
+          </div>
+          <div
+            class="custom-2xl:w-3/12 flex-grow-0 flex-shrink-0 basis-auto md:w-6/12"
+            data-aos="zoom-in"
+            data-aos-duration="600"
+          >
+            <div
+              class="shipping-item flex items-center gap-16 rounded-16 bg-main-100 transition-2"
+            >
+              <span
+                class="w-56 h-56 flex items-center justify-center rounded-[50%] bg-main-600 text-white text-32 flex-shrink-0"
+                ><i class="ph-fill ph-hand-heart"></i
+              ></span>
+              <div class="">
+                <h6 class="mb-0">100% Satisfaction</h6>
+                <span class="text-sm text-heading"
+                  >Free shipping all over the US</span
+                >
+              </div>
+            </div>
+          </div>
+          <div
+            class="custom-2xl:w-3/12 flex-grow-0 flex-shrink-0 basis-auto md:w-6/12"
+            data-aos="zoom-in"
+            data-aos-duration="800"
+          >
+            <div
+              class="shipping-item flex items-center gap-16 rounded-16 bg-main-100 transition-2"
+            >
+              <span
+                class="w-56 h-56 flex items-center justify-center rounded-[50%] bg-main-600 text-white text-32 flex-shrink-0"
+                ><i class="ph-fill ph-credit-card"></i
+              ></span>
+              <div class="">
+                <h6 class="mb-0">Secure Payments</h6>
+                <span class="text-sm text-heading"
+                  >Free shipping all over the US</span
+                >
+              </div>
+            </div>
+          </div>
+          <div
+            class="custom-2xl:w-3/12 flex-grow-0 flex-shrink-0 basis-auto md:w-6/12"
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+          >
+            <div
+              class="shipping-item flex items-center gap-16 rounded-16 bg-main-100 transition-2"
+            >
+              <span
+                class="w-56 h-56 flex items-center justify-center rounded-[50%] bg-main-600 text-white text-32 flex-shrink-0"
+                ><i class="ph-fill ph-chats"></i
+              ></span>
+              <div class="">
+                <h6 class="mb-0">24/7 Support</h6>
+                <span class="text-sm text-heading"
+                  >Free shipping all over the US</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Newsletter -->
+    <div class="newsletter">
+      <div class="container container-lg">
+        <div
+          class="newsletter-box relative rounded-16 flex items-center gap-16 flex-wrap z-[1]"
+        >
+          <img
+            src="images/newsletter-bg.png"
+            alt="Image"
+            class="absolute inset-block-start-0 inset-inline-start-0 z-[-1] w-full h-full opacity-6"
+          />
+          <div class="row items-center">
+            <div class="2xl:w-6/12 flex-grow-0 flex-shrink-0 basis-auto">
+              <div class="">
+                <h1 class="text-white mb-12 wow fadeInUp">
+                  Don't Miss Out on Spcial Deals
+                </h1>
+                <p class="text-white h5 mb-0 wow fadeInUp">
+                  SING UP FOR THE UPDATE NEWSLETTER
+                </p>
+                <form action="#" class="relative mt-40 wow fadeInUp">
+                  <input
+                    class="form-control block w-full p-[0.375rem_0.75rem] text-base leading-6 placeholder:text-[#495057] bg-white bg-clip-padding border border-[#ced4da] transition-all duration-150 ease-in-out focus:text-[#495057] focus:bg-white focus:border-main focus:outline-0 focus:shadow-none common-input !rounded-[50rem] text-white py-22 px-16 pe-144"
+                    placeholder="Your email address..."
+                  />
+                  <button
+                    type="submit"
+                    class="btn btn-main-two !rounded-[50rem] !absolute top-[50%] translate-y-[-50%] right-0 mr-[10px]"
+                  >
+                    Subscribe
+                  </button>
+                </form>
+              </div>
+            </div>
+            <div
+              class="2xl:w-6/12 flex-grow-0 flex-shrink-0 basis-auto text-center xl:block hidden"
+            >
+              <img
+                src="images/special-snacks-img.png"
+                alt="Image"
+                class="wow fadeInUp"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer -->
+    <footer class="footer py-52">
+      <img src="images/body-bottom-bg.png" alt="BG" class="body-bottom-bg" />
+      <div class="container container-lg">
+        <div class="footer-item-wrapper flex items-start flex-wrap">
+          <div class="footer-item" data-aos="fade-up" data-aos-duration="200">
+            <!-- <div class="footer-item__logo border border-2 border-red-900 flex justify-center items-center"> -->
+            <div class="footer-item__logo">
+              <a href="#"
+                ><img
+                  src="images/logo.png"
+                  style="padding-left: 30px"
+                  alt="Image"
+              /></a>
+            </div>
+            <p class="mb-24">
+              We're BuildMart Shop, an innovative team of suppliers.
+            </p>
+            <div class="flex items-center gap-16 mb-16">
+              <span
+                class="w-32 h-32 flex items-center justify-center rounded-[50%] bg-main-600 text-white text-md flex-shrink-0"
+                ><i class="ph-fill ph-map-pin"></i
+              ></span>
+              <span class="text-md text-gray-900"
+                >9RQR+5WC, Mohiuddinpur, Uttar Pradesh 209821, India</span
+              >
+            </div>
+            <div class="flex items-center gap-16 mb-16">
+              <span
+                class="w-32 h-32 flex items-center justify-center rounded-[50%] bg-main-600 text-white text-md flex-shrink-0"
+                ><i class="ph-fill ph-phone-call"></i
+              ></span>
+              <div class="flex items-center gap-16 flex-wrap">
+                <a
+                  href="tel:+91 94515 55272"
+                  class="text-md text-gray-900 hover-text-main-600"
+                  >+91 94515 55272</a
+                >
+                <!-- <span class="text-md text-main-600">or</span>
+                <a
+                  href="tel:+00987654012"
+                  class="text-md text-gray-900 hover-text-main-600"
+                  >+00 987 654 012</a
+                > -->
+              </div>
+            </div>
+            <div class="flex items-center gap-16 mb-16">
+              <span
+                class="w-32 h-32 flex items-center justify-center rounded-[50%] bg-main-600 text-white text-md flex-shrink-0"
+                ><i class="ph-fill ph-envelope"></i
+              ></span>
+              <a
+                href="mailto:wedealinbest@gmail.com"
+                class="text-md text-gray-900 hover-text-main-600"
+                >wedealinbest@gmail.com</a
+              >
+            </div>
+          </div>
+          <!-- Pages -->
+          <div class="footer-item" data-aos="fade-up" data-aos-duration="400">
+            <h6 class="footer-item__title">Pages</h6>
+            <ul class="footer-menu">
+              <li class="mb-16">
+                <a href="index.html" class="text-gray-600 hover-text-main-600"
+                  >Home</a
+                >
+              </li>
+              <li class="mb-16">
+                <a href="#" class="text-gray-600 hover-text-main-600"
+                  >About Us</a
+                >
+              </li>
+              <li class="mb-16">
+                <a href="#" class="text-gray-600 hover-text-main-600">Shop</a>
+              </li>
+              <li class="mb-16">
+                <a href="#" class="text-gray-600 hover-text-main-600">Offers</a>
+              </li>
+              <li class="mb-16">
+                <a href="contact.html" class="text-gray-600 hover-text-main-600"
+                  >Contact Us</a
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- Customer Support -->
+          <div class="footer-item" data-aos="fade-up" data-aos-duration="600">
+            <h6 class="footer-item__title">Customer Support</h6>
+            <ul class="footer-menu">
+              <li class="mb-16">
+                <a href="contact.html" class="text-gray-600 hover-text-main-600"
+                  >Help Center</a
+                >
+              </li>
+              <li class="mb-16">
+                <a href="contact.html" class="text-gray-600 hover-text-main-600"
+                  >Contact Us</a
+                >
+              </li>
+              <li class="mb-16">
+                <a href="contact.html" class="text-gray-600 hover-text-main-600"
+                  >Report Abuse</a
+                >
+              </li>
+              <li class="mb-16">
+                <a href="#" class="text-gray-600 hover-text-main-600"
+                  >Submit and Dispute</a
+                >
+              </li>
+              <li class="mb-16">
+                <a href="#" class="text-gray-600 hover-text-main-600"
+                  >Policies & Rules</a
+                >
+              </li>
+              <li class="">
+                <a href="#" class="text-gray-600 hover-text-main-600"
+                  >Online Shopping</a
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- My Account -->
+          <div class="footer-item" data-aos="fade-up" data-aos-duration="800">
+            <h6 class="footer-item__title">My Account</h6>
+            <ul class="footer-menu">
+              <li class="mb-16">
+                <a href="#" class="text-gray-600 hover-text-main-600"
+                  >My Account</a
+                >
+              </li>
+              <li class="mb-16">
+                <a href="#" class="text-gray-600 hover-text-main-600"
+                  >Order History</a
+                >
+              </li>
+              <li class="mb-16">
+                <a href="#" class="text-gray-600 hover-text-main-600"
+                  >Shoping Cart</a
+                >
+              </li>
+              <li class="mb-16">
+                <a href="#" class="text-gray-600 hover-text-main-600"
+                  >Compare</a
+                >
+              </li>
+              <li class="mb-16">
+                <a href="#" class="text-gray-600 hover-text-main-600"
+                  >Help Ticket</a
+                >
+              </li>
+              <li class="">
+                <a href="#" class="text-gray-600 hover-text-main-600"
+                  >Wishlist</a
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- Our Categories -->
+          <div class="footer-item" data-aos="fade-up" data-aos-duration="1000">
+            <h6 class="footer-item__title">Our Categories</h6>
+            <ul class="footer-menu">
+              <li class="mb-16">
+                <a href="#" class="text-gray-600 hover-text-main-600"
+                  >Rishabh Paints</a
+                >
+              </li>
+              <li class="mb-16">
+                <a href="#" class="text-gray-600 hover-text-main-600"
+                  >Rishabh Hardware</a
+                >
+              </li>
+              <li class="mb-16">
+                <a href="#" class="text-gray-600 hover-text-main-600"
+                  >Refresh Sanitary</a
+                >
+              </li>
+              <li class="mb-16">
+                <a href="#" class="text-gray-600 hover-text-main-600"
+                  >Royal Tiles</a
+                >
+              </li>
+              <li class="mb-16">
+                <a href="#" class="text-gray-600 hover-text-main-600"
+                  >Rishabh Electronics</a
+                >
+              </li>
+              <li class="">
+                <a href="#" class="text-gray-600 hover-text-main-600"
+                  >Arpit Pipe</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="footer-item" data-aos="fade-up" data-aos-duration="1200">
+            <h6 class="">Shop on The Go</h6>
+            <p class="mb-16">BuildMart App is available. Get it now</p>
+            <div class="flex items-center gap-8 my-32">
+              <a href="https://www.apple.com/store" class=""
+                ><img src="images/store-img1.png" alt="Image" /> </a
+              ><a href="https://play.google.com/store/apps?hl=en" class=""
+                ><img src="images/store-img2.png" alt="Image"
+              /></a>
+            </div>
+            <ul class="flex items-center gap-16">
+              <li>
+                <a
+                  href="#"
+                  class="w-44 h-44 flex items-center justify-center bg-main-100 text-main-600 text-xl rounded-[50%] hover-bg-main-600 hover-text-white"
+                  ><i class="ph-fill ph-facebook-logo"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="w-44 h-44 flex items-center justify-center bg-main-100 text-main-600 text-xl rounded-[50%] hover-bg-main-600 hover-text-white"
+                  ><i class="ph-fill ph-twitter-logo"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="w-44 h-44 flex items-center justify-center bg-main-100 text-main-600 text-xl rounded-[50%] hover-bg-main-600 hover-text-white"
+                  ><i class="ph-fill ph-instagram-logo"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="w-44 h-44 flex items-center justify-center bg-main-100 text-main-600 text-xl rounded-[50%] hover-bg-main-600 hover-text-white"
+                  ><i class="ph-fill ph-linkedin-logo"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Copyright Section -->
+    <div class="bottom-footer bg-color-one py-8">
+      <div class="container container-lg">
+        <div class="bottom-footer__inner flex-between flex-wrap gap-16 py-16">
+          <p class="bottom-footer__text wow fadeInLeftBig">
+            All Rights Reserved &copy; 2025 By BuildMart | Developed By Axsem
+            Softwares
+          </p>
+          <div class="flex items-center gap-8 flex-wrap wow fadeInRightBig">
+            <span class="text-heading text-sm">We Are Accepting</span>
+            <img src="images/payment-method.png" alt="Image" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
